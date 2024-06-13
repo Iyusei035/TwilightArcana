@@ -225,7 +225,6 @@ public class BossController : MonoBehaviour,IDamageable
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Hp = 0;
             Death();
         }
 
