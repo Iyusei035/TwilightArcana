@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Dead : MonoBehaviour
 {
     public AudioClip sound1;
+    public AudioClip sound2;
     AudioSource audioSource;
 
     WaitForSeconds wait;
@@ -16,7 +17,7 @@ public class Dead : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(sound1);
 
-        wait = new WaitForSeconds(1.0f);
+        wait = new WaitForSeconds(4.8f);
 
         StartCoroutine(nameof(DeadSound));
 
@@ -26,6 +27,6 @@ public class Dead : MonoBehaviour
     IEnumerator DeadSound()
     {
         yield return wait;
-        audioSource.PlayOneShot(sound1);
+        audioSource.PlayOneShot(sound2);
     }
 }

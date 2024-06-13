@@ -216,7 +216,7 @@ public class BossController : MonoBehaviour,IDamageable
         capsuleCollider.enabled = true;
 
         //デバック用:ボスのHPを半分にする
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             Hp = maxHp / 2;
             Debug.Log(Hp);
