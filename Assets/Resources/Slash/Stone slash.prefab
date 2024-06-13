@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3360817457645889697}
   - component: {fileID: 8014398326134201171}
   - component: {fileID: 1608261325020625165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stone slash
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   a: {fileID: 1518232233151987118}
   particle: {fileID: 4577776539254710993}
+  IsDamage: 10
 --- !u!198 &4577776539254710993
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5012,7 +5013,7 @@ GameObject:
   - component: {fileID: 2329527165037484110}
   - component: {fileID: 2801714595841798700}
   - component: {fileID: 3376815268196670181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9909,7 +9910,7 @@ GameObject:
   - component: {fileID: 8920308327119836847}
   - component: {fileID: 9075860641547638049}
   - component: {fileID: 4856831212601610796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14806,7 +14807,7 @@ GameObject:
   - component: {fileID: 516319967796564989}
   - component: {fileID: 2599826556371898522}
   - component: {fileID: 6332482185232151685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StonesHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19761,7 +19762,7 @@ GameObject:
   - component: {fileID: 135656424750098604}
   - component: {fileID: 7632673607636151349}
   - component: {fileID: 6043569976999493568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
