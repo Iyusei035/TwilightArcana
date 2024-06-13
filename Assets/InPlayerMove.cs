@@ -3,19 +3,26 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
 public class InMove : MonoBehaviour, IDamageable
 {
     [SerializeField] private Charadata data;
-    int hp = 0;
+    float hp = 0;
     static int hashAttackType = Animator.StringToHash("AttackType");
     public float PlayerMovePower = 0;
     Animator animator;
     UnityEngine.Quaternion targetRotation;
     float inv = 1.5f;
     [SerializeField] CapsuleCollider coll;
-    public int Hp
+    //private GameObject[] hitEffects;
+    [SerializeField] GameObject HealingEffect;
+    [SerializeField] int HealingCount=5;
+    [SerializeField] int HealPower = 45;
+
+    float protect=1;
+    public float Hp
     {
         get { return hp; }
         set
@@ -31,18 +38,22 @@ public class InMove : MonoBehaviour, IDamageable
 
     public void Damage(int value)
     {
+        
         if (value <= 0)
         {
             return;
         }
-        Hp -= value;
+
+        Protect();
+        Hp -= (float)value*protect;
         if (Hp <= 0)
         {
             Death();
         }
+        Debug.Log( Hp);
     }
 
-    public int GetPlayerHP()
+    public float GetPlayerHP()
     {
         return hp;
     }
@@ -51,7 +62,17 @@ public class InMove : MonoBehaviour, IDamageable
     {
         //Destroy(gameObject);
     }
-
+    public void Protect()
+    {
+        if (GameObject.FindGameObjectWithTag("Protect") != null)
+        {
+            protect = 0.5f;
+        }
+        else
+        {
+            protect = 1;
+        }
+    }
     void Awake()
     {
         //コンポーネント関連付け
@@ -73,6 +94,29 @@ public class InMove : MonoBehaviour, IDamageable
         var speed = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
         var rotationSpeed = PlayerMovePower * Time.deltaTime;
 
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.SetTrigger("Rolling");
+                coll.enabled = false;
+                inv = 1.5f;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                if (hp <= 100)
+                {
+                    if (HealingCount >= 0)
+                    {
+                        animator.SetTrigger("Healing");
+                        Heal();
+                        speed = 1;
+                    }
+                }
+
+
+            }
+        }
+
         //移動方向を向く
         if (velocity.magnitude > 0.5f)
         {
@@ -82,21 +126,14 @@ public class InMove : MonoBehaviour, IDamageable
         //移動速度をanimatorに代入
         animator.SetFloat("Speed", velocity.magnitude * speed, 0.1f, Time.deltaTime);
 
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                animator.SetTrigger("Rolling");
-                coll.enabled = false;
-                inv = 1.5f;
-            }
-        }
+       
         inv -= Time.deltaTime;
         if (inv <= 0)
         {
             inv = 0;
             coll.enabled = true;
         }
-
+        DebugKey();
     }
     void FootR() 
     {
@@ -106,10 +143,45 @@ public class InMove : MonoBehaviour, IDamageable
     {
         GetComponent<AudioSource>().Play();
     }
+
+    public void Heal()
+    {
+        //GameObject _prefab = Resources.Load<GameObject>("Prefabs/Healing");
+        UnityEngine.Vector3 _pos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        UnityEngine.Quaternion PlayerRot = GameObject.FindGameObjectWithTag("Player").transform.rotation;
+        Instantiate(HealingEffect, _pos,PlayerRot);
+
+    }
+
+
+    void Healing()
+    {
+        hp += HealPower;
+        HealingCount--;
+        if (hp >= 100)
+        {
+            hp = 100;
+        }
+       
+        
+    }
     void Hit() { }
     void CallAnimationEnd() { }
 
+    private void DebugKey()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SceneManager.LoadScene("BildScene");
 
+        }
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    SceneManager.LoadScene("TitleScene");
+
+
+        //}
+    }
 }
 //using UnityEngine;
 
