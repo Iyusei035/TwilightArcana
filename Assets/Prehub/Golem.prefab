@@ -110,6 +110,37 @@ CapsuleCollider:
   m_Height: 0.1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5599315953114263724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2176045993481018561}
+  m_Layer: 0
+  m_Name: RagePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2176045993481018561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599315953114263724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 957138621535668783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7345839480229169901
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +602,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7504086121337986851}
+    - targetCorrespondingSourceObject: {fileID: 400002, guid: d19f0e375a0203a4ca72964404dbd39e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2176045993481018561}
     - targetCorrespondingSourceObject: {fileID: 400006, guid: d19f0e375a0203a4ca72964404dbd39e,
         type: 3}
       insertIndex: -1
@@ -600,6 +635,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4783740648643208974}
+    - targetCorrespondingSourceObject: {fileID: 100038, guid: d19f0e375a0203a4ca72964404dbd39e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8942777968364738581}
+    - targetCorrespondingSourceObject: {fileID: 100038, guid: d19f0e375a0203a4ca72964404dbd39e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 850818554764790186}
   m_SourcePrefab: {fileID: 100100000, guid: d19f0e375a0203a4ca72964404dbd39e, type: 3}
 --- !u!4 &957138621535668747 stripped
 Transform:
@@ -625,6 +668,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 957138621536063661}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &957138621535668783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: d19f0e375a0203a4ca72964404dbd39e,
+    type: 3}
+  m_PrefabInstance: {fileID: 957138621536063661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &957138621536097899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100038, guid: d19f0e375a0203a4ca72964404dbd39e,
@@ -647,7 +696,7 @@ MonoBehaviour:
   navmeshAgent: {fileID: 501929499767007888}
   target: {fileID: 0}
   capsuleCollider: {fileID: 1989906568276508682}
-  maxHp: 100
+  maxHp: 300
   deadWaitTime: 3
   chaseDistance: 23
   attackCollider: {fileID: 9142458316130095281}
@@ -668,6 +717,7 @@ MonoBehaviour:
   jumpDistance: 24
   waistBone: {fileID: 957138621535668771}
   BasePoint: {fileID: 2163073548273377042}
+  RagePoint: {fileID: 2176045993481018561}
   hp: 0
   effectPool: {fileID: 0}
 --- !u!195 &501929499767007888
@@ -754,7 +804,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -852,6 +902,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: ea986555567937c49b85693a69588bd6, type: 3}
+  pitchRange: 0.1
+--- !u!114 &8942777968364738581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957138621536097899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5643375ba7fe64690fb77cf519c44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 89e6e841d7f52784fa35f7ca05bfbc54, type: 3}
+  pitchRange: 0.1
+--- !u!114 &850818554764790186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957138621536097899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68a7a3c0f2cce149ad7fd510eaac56b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: f0f8e4a669e535a4585987305f8599cd, type: 3}
   pitchRange: 0.1
 --- !u!95 &957138621543359949 stripped
 Animator:
