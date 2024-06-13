@@ -1,4 +1,3 @@
-using FlMr_Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class build : MonoBehaviour
 {
+    // Start is called before the first frame update
     private static bool isInitialized = false;
-    private void Start()
+    void Start()
     {
-        var itemBag = GameObject.FindGameObjectWithTag("ItemBag").GetComponent<ItemBag>();
-        var box = GameObject.FindGameObjectWithTag("ItemBox").GetComponent<ItemBox>();
         if (!isInitialized)
         {
             isInitialized = true;
-            for (int i = 1; i <= ItemUtility.Instance.AllItems.Count; ++i)
-            {
-                if (!itemBag.AddItem(i, 1))
-                    box.AddItem(i, 1);
-            }
+            //SceneManager.LoadScene("DontDestroyOnLoadObjectScene");
+            //Debug.Log("DontDestroyOnLoadObjectScene‚É“ü‚è‚Ü‚µ‚½");
         }
     }
     private void Update()
