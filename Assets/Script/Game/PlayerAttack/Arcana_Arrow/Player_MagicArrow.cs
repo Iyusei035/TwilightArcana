@@ -90,11 +90,10 @@
 //}
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class Player_MagicArrow : MonoBehaviour,IDamageable
+public class Player_MagicArrow : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] Vector3 targetDirection; // Changed type to Vector3
@@ -110,7 +109,7 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
     Vector3 acceleration;
     Transform thisTransform;
     [SerializeField] float trackingRadius = 10.0f;
-    [SerializeField] int IsDamage = 1;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -158,35 +157,18 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
     }
     private void OnCollisionEnter(Collision collision)
     {
-        IDamageable damageable=collision.gameObject.GetComponent<IDamageable>();
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("!Enemy!Hit");
-            damageable.Damage((int)IsDamage);
             Destroy(gameObject);
         }
     }
-    
+
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(lifeTime);
 
         Destroy(gameObject);
-    }
-
-    public void Death()
-    {
-
-    }
-
-    void IDamageable.Damage(int value)
-    {
-        
-    }
-
-    void IDamageable.Protect()
-    {
-        throw new System.NotImplementedException();
     }
 }
 

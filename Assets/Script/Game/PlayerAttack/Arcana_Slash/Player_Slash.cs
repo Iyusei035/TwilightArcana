@@ -10,7 +10,6 @@ public class Player_Slash : MonoBehaviour
     Vector3 slashPos;
     Quaternion SlashRot;
     // [SerializeField] Transform player;
-    [SerializeField] int IsDamage = 1;
     private void Start()
     {
         particle=GetComponent<ParticleSystem>();
@@ -27,12 +26,9 @@ public class Player_Slash : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("!Enemy!Hit");
-            damageable.Damage((int)IsDamage);
-            Destroy(gameObject);
         }
     }
 }
