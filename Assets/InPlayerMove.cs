@@ -109,7 +109,7 @@ public class InMove : MonoBehaviour, IDamageable
                 coll.enabled = false;
                 inv = 1.5f;
             }
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 if (hp <= 100)
                 {

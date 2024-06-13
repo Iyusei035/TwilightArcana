@@ -32,7 +32,7 @@ public class Player_Slash : MonoBehaviour
         {
             Debug.Log("!Enemy!Hit");
             damageable.Damage((int)IsDamage);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
