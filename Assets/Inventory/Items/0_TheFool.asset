@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03cc8d4e20e3d45a94069673d7c291, type: 3}
+  m_Name: 0_TheFool
+  m_EditorClassIdentifier: 
+  uniqueId: 8
+  itemName: 0_TheFool
+  icon: {fileID: 21300000, guid: c5c821bc85024e345b3ce853955a2f09, type: 3}
+  description: "\u30D6\u30EA\u30F3\u30AF\u3092\u884C\u3044\u843D\u3057\u7269\u3092\u843D\u3068\u3059"
+  arcanaBase: {fileID: -1246021411365712402, guid: 04f2c471f3d2f31468eb28f59d370105,
+    type: 3}
+  maxCoolTime: 5
