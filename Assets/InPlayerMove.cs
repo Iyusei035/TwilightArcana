@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using UnityEngine.VFX;
 
 public class InMove : MonoBehaviour, IDamageable
@@ -190,6 +191,12 @@ public class InMove : MonoBehaviour, IDamageable
 
         //}
     }
+
+    public void WarpStart()
+    {
+        animator.SetTrigger("Warp");
+    }
+   
 }
 //using UnityEngine;
 
