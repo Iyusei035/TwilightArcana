@@ -1,35 +1,42 @@
 using System;
-using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-
 namespace FlMr_Inventory
 {
+    [AttributeUsage(AttributeTargets.Field)]
+    public class TagAttribute : PropertyAttribute
+    {
+    }
+#if UNITY_EDITOR
+    [CustomPropertyDrawer(typeof(TagAttribute))]
+    public class TagAttributeDrawer : PropertyDrawer
+    {
+        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+        {
+            if (property.propertyType != SerializedPropertyType.String)
+            {
+                EditorGUI.PropertyField(position, property, label);
+                return;
+            }
+            var tag = EditorGUI.TagField(position, label, property.stringValue);
+            property.stringValue = tag;
+        }
+    }
+#endif
     internal class GameSceneSlot : MonoBehaviour
     {
+        [SerializeField][Tag] private string _tagName;
         [SerializeField] private Image icon;
         [SerializeField] private Image shutOut;
-        /// <summary>
-        /// このスロットに入っているアイテム
-        /// </summary>
         internal ItemBase Item { get; private set; }
-        /// <summary>
-        /// アイテムのアイコンを表示する
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="number"></param>
         internal void UpdateItem(ItemBase item, int number)
         {
             if (number > 0 && item != null)
             {
-                // アイテムが空ではない場合
                 Item = item;
-                // アイコンの表示
                 icon.sprite = item.Icon;
                 icon.color = Color.white;
-                // 数量の表示
-                //numberText.gameObject.SetActive(number > 1);
-                //numberText.text = number.ToString();
                 Number = number;
             }
             else
@@ -38,50 +45,21 @@ namespace FlMr_Inventory
                 Number = 0;
                 icon.sprite = null;
                 icon.color = new Color(0, 0, 0, 0);
-                //numberText.gameObject.SetActive(false);
             }
         }
-        /// <summary>
-        /// このスロットに入っているアイテムの個数を表示するテキスト
-        /// </summary>
-
-        /// <summary>
-        /// 数量
-        /// </summary>
         private int Number { get; set; }
-
-        /// <summary>
-        /// スロットがクリックされた際に実行するメソッド
-        /// [ 引数 ]
-        /// ItemBase : スロットに入っているアイテム
-        /// int : アイテムの個数
-        /// GameObject : このスロットのオブジェクト
-        /// </summary>
         private Action<ItemBase, int, GameObject> OnClickCallback { get; set; }
-
-        /// <summary>
-        /// このクラスのインスタンスが生成された際に呼ぶメソッド
-        /// </summary>
-        /// <param name="onClickCallback"></param>
         internal void Initialize(Action<ItemBase, int, GameObject> onClickCallback)
         {
             OnClickCallback = onClickCallback;
         }
-
-        /// <summary>
-        /// スロットがクリックされたときに呼ばれるメソッド
-        /// </summary>
         public void OnClicked()
         {
-            //このスロットにアイテムが存在している場合
             if (Item != null)
             {
-                // コールバックメソッドを実行
                 OnClickCallback(Item, Number, this.gameObject);
             }
         }
-        //==============================================
-
         private float coolTimeCount = 0;
         private void Update()
         {

@@ -43,6 +43,7 @@ namespace FlMr_Inventory
             }
             UpdateItem();
         }
+
         /// <summary>
         /// アイテムをバッグに追加する
         /// </summary>
@@ -249,5 +250,20 @@ namespace FlMr_Inventory
         /// <param name="item"></param>
         /// <returns></returns>
         public int Find(ItemBase item) => Find(item.UniqueId);
+
+        public ArcanaBox_Key[] arcanaBox_Keys;
+
+        public bool ArcanaSlotaCheck(int id)
+        {
+            for (int count = 0; count < arcanaBox_Keys.Count(); ++count)
+            {
+                if (arcanaBox_Keys[count].GetItem() == null) continue;
+                if (arcanaBox_Keys[count].GetItem().UniqueId == id)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
 namespace FlMr_Inventory
 {
@@ -11,28 +10,27 @@ namespace FlMr_Inventory
         [SerializeField] private string description;
         [SerializeField] private ArcanaBase arcanaBase = null;
         [SerializeField] private int maxCoolTime = 10;
+        [SerializeField] private int BasicDamage = 10;
         private float coolTime = 0;
         private bool activeFlg = true;
+        public enum ArcanaType
+        {
+            Attack,
+            Support,
+            Ex
+        }
+        public ArcanaType arcanaType;
 
-        /// <summary>
         /// アイテムの種類と1:1対応する整数
-        /// (データを保存するときや、将来通信機能を実装する際に真価を発揮する)
-        /// </summary>
         public int UniqueId => uniqueId;
 
-        /// <summary>
         /// アイテム名
-        /// </summary>
         public string ItemName => itemName;
 
-        /// <summary>
         /// アイテムのアイコン
-        /// </summary>
         public Sprite Icon => icon;
 
-        /// <summary>
         /// プレイヤーに対するアイテムの説明
-        /// </summary>
         public string Description => description;
 
         public ArcanaBase GetArcana()
@@ -68,5 +66,13 @@ namespace FlMr_Inventory
             adjustmentCooltime = coolTime / adjustmentCooltime;
             return adjustmentCooltime;
         }
+
+        public int GetBasicDamage()
+        {
+            return BasicDamage;
+        }
+
+        public int SetId(int id)
+        { return uniqueId = id; }
     }
 }

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7469f846684136447908d0cde6a27691, type: 3}
   m_Name: Arcana_GreenSemicircle
   m_EditorClassIdentifier: 
-  uniqueId: 7
+  uniqueId: 6
   itemName: GreenSemicircle
   icon: {fileID: 21300000, guid: fc4fd4ffc0e3d1d44aa1015b26097b3b, type: 3}
   description: MIDORI!!!
   arcanaBase: {fileID: -7891925957330843559, guid: 59c787a11e7938349b474b2b6a9f701f,
     type: 3}
+  maxCoolTime: 10
+  BasicDamage: 10
+  arcanaType: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
+  m_Name: Blank2
+  m_EditorClassIdentifier: 
+  uniqueId: 14
+  itemName: 
+  icon: {fileID: 628183886, guid: eabd7b20bfc4aaa40aaf21cab855de31, type: 3}
+  description: 
+  arcanaBase: {fileID: 0}
+  maxCoolTime: 10
+  BasicDamage: 10
+  arcanaType: 1

@@ -368,7 +368,6 @@ GameObject:
   - component: {fileID: 5167477151295848028}
   - component: {fileID: 4310900533312872830}
   - component: {fileID: 1543303678662392619}
-  - component: {fileID: 8927180716053534083}
   m_Layer: 5
   m_Name: SceneChangeButton_Title
   m_TagString: Untagged
@@ -478,7 +477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8927180716053534083}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneChange_Title, Assembly-CSharp
         m_MethodName: change_button
         m_Mode: 1
@@ -490,18 +489,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8927180716053534083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3525217283208946215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02cf6f545843b784cb3a02ad741b408f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6108445133846013834
 GameObject:
   m_ObjectHideFlags: 0

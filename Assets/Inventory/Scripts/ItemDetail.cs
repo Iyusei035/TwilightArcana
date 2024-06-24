@@ -15,7 +15,6 @@ public class ItemDetail : ItemDetailBase
     {
         itemName.text = item.ItemName;
         description.text = item.Description;
-        //itemIcon.sprite = item.Icon;
 
         if (item is IUsable usable)
         {
@@ -108,11 +107,36 @@ public class ItemDetail : ItemDetailBase
         }
     }
 
+    protected internal override void OnClickCallback_ArcanaBox_Key
+            (ArcanaBox_Key arcanaBox_Key, ItemBase item, int number, GameObject slotObj)
+    {
+        itemName.text = item.ItemName;
+        description.text = item.Description;
+        //itemIcon.sprite = item.Icon;
+
+        if (item is IUsable usable)
+        {
+            AddButton("Use", () =>
+            {
+                if (usable.Check())
+                {
+                    usable.Use();
+                    arcanaBox_Key.RemoveItem(item.UniqueId, 1);
+                }
+            });
+        }
+
+        if (item is IDeletable)
+        {
+            AddButton("Delete", () => arcanaBox_Key.RemoveItem(item.UniqueId, 1));
+        }
+    }
+
     private void AddButton(string buttonName, UnityAction function)
     {
         //var button = Instantiate(buttonPrefab, buttonsTrn);
-       // button.onClick.AddListener(function);
-       // button.GetComponentInChildren<TextMeshProUGUI>().text = buttonName;
+        // button.onClick.AddListener(function);
+        // button.GetComponentInChildren<TextMeshProUGUI>().text = buttonName;
     }
 
 

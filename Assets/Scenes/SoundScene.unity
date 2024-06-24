@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &702827062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3525217283208946215, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+    type: 3}
+  m_PrefabInstance: {fileID: 1587928267}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &702827064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702827062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f760a42c2ccf1488bb77cb57ff208f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNameList: 0
 --- !u!1 &811283469
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +319,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00efddbcee3b3f0478dc56da47187844, type: 3}
+--- !u!20 &1296598381 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1668107488911103510, guid: 00efddbcee3b3f0478dc56da47187844,
+    type: 3}
+  m_PrefabInstance: {fileID: 1296598380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1587928267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,6 +333,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1543303678662392619, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 702827064}
+    - target: {fileID: 1543303678662392619, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Change_button
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543303678662392619, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChangeButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4311448793682500936, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -322,6 +362,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345920387009863231, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1296598381}
+    - target: {fileID: 5345920387009863231, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345920387009863231, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1628566609
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345920387009863231, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5955945935358806041, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
         type: 3}
@@ -441,7 +501,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3525217283208946215, guid: 7fd3f20dbd61e7144a7ecd44d2b95782,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 702827064}
   m_SourcePrefab: {fileID: 100100000, guid: 7fd3f20dbd61e7144a7ecd44d2b95782, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

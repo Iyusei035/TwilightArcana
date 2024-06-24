@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e75fc2921466344ea7956f0d8ba92ae, type: 3}
   m_Name: Arcana_Sword
   m_EditorClassIdentifier: 
-  uniqueId: 2
+  uniqueId: 11
   itemName: Arcana_Sword
   icon: {fileID: 21300000, guid: b429e94457fbdd846ac4cdb76dba1cb1, type: 3}
   description: Sword!!
   arcanaBase: {fileID: -163234038878449474, guid: 049ce32c5fbffd14e828ce6b63cca50e,
     type: 3}
+  maxCoolTime: 10
+  BasicDamage: 10
+  arcanaType: 0

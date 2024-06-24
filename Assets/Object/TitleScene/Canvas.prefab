@@ -292,7 +292,6 @@ GameObject:
   - component: {fileID: 5947685075938183252}
   - component: {fileID: 3190525960777372170}
   - component: {fileID: 839663698773466663}
-  - component: {fileID: 7227726516782110776}
   m_Layer: 5
   m_Name: SceneChangeButton_Sound
   m_TagString: Untagged
@@ -402,7 +401,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7227726516782110776}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneChange_Sound, Assembly-CSharp
         m_MethodName: change_button
         m_Mode: 1
@@ -414,18 +413,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7227726516782110776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2460431489745595768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5df45ed64a2d8e14ab79375174fcbad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2732791259372475505
 GameObject:
   m_ObjectHideFlags: 0
