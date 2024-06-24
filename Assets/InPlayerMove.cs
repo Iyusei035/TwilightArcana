@@ -196,7 +196,11 @@ public class InMove : MonoBehaviour, IDamageable
     {
         animator.SetTrigger("Warp");
     }
-   
+    
+    public void ChargeStart()
+    {
+        animator.SetTrigger("Charge");
+    }
 }
 //using UnityEngine;
 
