@@ -22,5 +22,7 @@ namespace FlMr_Inventory
      (SelectItemBox itemBog, ItemBase item, int number, GameObject slotObj);
         protected internal abstract void OnClickCallback_Game
             (GameSceneInventory itemGameBox, ItemBase item, int number, GameObject slotObj);
+        protected internal abstract void OnClickCallback_ArcanaBox_Key
+            (ArcanaBox_Key arcanaBox_Key, ItemBase item, int number, GameObject slotObj);
     }
 }

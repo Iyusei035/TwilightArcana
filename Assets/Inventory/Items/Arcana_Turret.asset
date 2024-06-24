@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6d4112ab6bb6646ab82623e983fda5, type: 3}
+  m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: Arcana_Turret
   m_EditorClassIdentifier: 
-  uniqueId: 5
-  itemName: Turret
+  uniqueId: 12
+  itemName: "\u30BF\u30EC\u30C3\u30C8"
   icon: {fileID: 21300000, guid: 113d994f4a0e3b34db447fc9c734c9ae, type: 3}
-  description: "\u30BF\u30EC\u30C3\u30C8\u751F\u6210"
+  description: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306E\u8FD1\u304F\u306B\u8FFD\u5F93\u578B\u30BF\u30EC\u30C3\u30C8\u3092\u751F\u6210\u3057\u3001\u6575\u304C\u8FD1\u3065\u3044\u305F\u3068\u304D\u3001\u63F4\u8B77\u5C04\u6483\u3092\u884C\u3044\u307E\u3059"
   arcanaBase: {fileID: -5782153747566148220, guid: d1bf7703d59c07e4ba0fcc15d4173bb2,
     type: 3}
   maxCoolTime: 10
+  BasicDamage: 10
+  arcanaType: 0

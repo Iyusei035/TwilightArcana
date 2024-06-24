@@ -7,7 +7,7 @@ public class Arcana_ElectricitySwordAction : ArcanaBase
 {
     public override void ArcanaEffect()
     {
-        var _player = GameObject.FindGameObjectWithTag("Player").transform.Find("male00");
+        var _player = GameObject.FindGameObjectWithTag("Player");
         if (_player == null)
         {
             Debug.Log("ÉvÉåÉCÉÑÅ[Ç™Ç¢Ç‹ÇπÇÒ");
