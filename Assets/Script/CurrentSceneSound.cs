@@ -8,6 +8,7 @@ public class CurrentSceneSound : MonoBehaviour
     void Start()
     {
         if (!SoundManager.instance) return;
+        if (SoundManager.instance.GetSoundNumber() == soundNumber) return;
         SoundManager.instance.audioSourceBGM.Stop();
         SoundManager.instance.SetPlayBGM(soundNumber);
     }

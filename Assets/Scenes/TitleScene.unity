@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f760a42c2ccf1488bb77cb57ff208f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNameList: 1
+  sceneNameList: 3
 --- !u!1 &650587840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,8 +1061,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SceneChangeButton, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8298167060856133635, guid: 270e13dc202db1945bb29d42f6560549, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2554641187765688935, guid: 270e13dc202db1945bb29d42f6560549,
