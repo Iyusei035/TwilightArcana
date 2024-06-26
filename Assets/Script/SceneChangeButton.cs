@@ -17,31 +17,56 @@ public class SceneChangeButton : MonoBehaviour
     public void Change_button()
     {
         sceneName = null;
-        if (!GameObject.Find("SceneFade")) return;
-        fadeManager = GameObject.Find("SceneFade").GetComponentInChildren<FadeManager>();
-        if (!fadeManager)
+        if (GameObject.Find("SceneFade"))
         {
-            Debug.Log("FadeManager‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
-            return;
+            fadeManager = GameObject.Find("SceneFade").GetComponentInChildren<FadeManager>();
+            if (!fadeManager)
+            {
+                Debug.Log("FadeManager‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+                return;
+            }
+            fadeManager.Out = true;
+            switch (sceneNameList)
+            {
+                case SceneNameList.Title:
+                    sceneName = "TitleScene";
+                    break;
+                case SceneNameList.Bild:
+                    sceneName = "BildScene";
+                    break;
+                case SceneNameList.Sound:
+                    sceneName = "SoundScene";
+                    break;
+                case SceneNameList.Select:
+                    sceneName = "SelectScene";
+                    break;
+                case SceneNameList.Game:
+                    sceneName = "Boss";
+                    break;
+            }
         }
-        fadeManager.Out = true;
-        switch (sceneNameList)
+        else
         {
-            case SceneNameList.Title:
-                sceneName = "TitleScene";
-                break;
-            case SceneNameList.Bild:
-                sceneName = "BildScene";
-                break;
-            case SceneNameList.Sound:
-                sceneName = "SoundScene";
-                break;
-            case SceneNameList.Select:
-                sceneName = "SelectScene";
-                break;
-            case SceneNameList.Game:
-                sceneName = "Boss";
-                break;
+            switch (sceneNameList)
+            {
+                case SceneNameList.Title:
+                    sceneName = "TitleScene";
+                    break;
+                case SceneNameList.Bild:
+                    sceneName = "BildScene";
+                    break;
+                case SceneNameList.Sound:
+                    sceneName = "SoundScene";
+                    break;
+                case SceneNameList.Select:
+                    sceneName = "SelectScene";
+                    break;
+                case SceneNameList.Game:
+                    sceneName = "Boss";
+                    break;
+            }
+            if (sceneName == null) return;
+            SceneManager.LoadScene(sceneName);
         }
     }
     private void Update()

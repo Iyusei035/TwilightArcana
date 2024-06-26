@@ -139,7 +139,22 @@ PrefabInstance:
     - target: {fileID: 1802773775085209690, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
@@ -164,17 +179,17 @@ PrefabInstance:
     - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5171440953439751180, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
@@ -190,6 +205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286295414417529115, guid: 2911240ed78ac9640b272f2bc2675b75,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8286295414417529115, guid: 2911240ed78ac9640b272f2bc2675b75,
         type: 3}
@@ -322,6 +342,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneFade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652786470991879247, guid: 0b15b523a37fcf840abaea93bfd7aba2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5836611339437352853, guid: 0b15b523a37fcf840abaea93bfd7aba2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7252012616614914921, guid: 0b15b523a37fcf840abaea93bfd7aba2,
         type: 3}
@@ -1046,6 +1076,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1628566609
       objectReference: {fileID: 0}
+    - target: {fileID: 5687454159278224156, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7225794249944333205, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1331,7 +1366,6 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 158930881}
   - {fileID: 644471805}
   - {fileID: 650843774}
   - {fileID: 447016369}
@@ -1339,3 +1373,4 @@ SceneRoots:
   - {fileID: 182248312}
   - {fileID: 446062769}
   - {fileID: 436416798}
+  - {fileID: 158930881}

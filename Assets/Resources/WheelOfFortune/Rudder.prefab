@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8540012114614941133}
   m_Layer: 0
   m_Name: Rudder
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fcc49f98a92044cbb0031fbb47d646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 180
-  distanceFromTarget: {x: 0, y: 2, z: 5}
+  rotateSpeed: 150
+  distanceFromTarget: {x: 0, y: 2, z: 4}
 --- !u!54 &3861477594933275039
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 2483482419852305944}
   m_Layer: 0
   m_Name: Rudder3
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 4109301667117936680}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: -1}
+  m_LocalPosition: {x: -0.4, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 5127720532674787714}
   m_Layer: 0
   m_Name: Rudder2
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 5256727468899986134}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: -1}
+  m_LocalPosition: {x: 0.4, y: 0, z: -0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

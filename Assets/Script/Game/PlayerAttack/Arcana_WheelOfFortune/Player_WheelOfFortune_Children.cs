@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_WheelOfFortune_Children : MonoBehaviour
 {
-    private int IsDamage = 1;
+    private int IsDamage = 5;
     private void OnCollisionEnter(Collision collision)
     {
         IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
