@@ -332,8 +332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ArcanaSlot_M0, Assembly-CSharp
+      - m_Target: {fileID: 7175880052125207951}
+        m_TargetAssemblyTypeName: ArcanaSlot_Key, Assembly-CSharp
         m_MethodName: OnClicked
         m_Mode: 1
         m_Arguments:

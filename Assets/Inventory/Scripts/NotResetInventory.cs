@@ -24,16 +24,24 @@ public class NotResetInventory : MonoBehaviour
     }
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Boss")
-        {
-            Canvas canvas = GetComponent<Canvas>();
-            canvas.enabled = false;
-        }
-        else
+        if (SceneManager.GetActiveScene().name == "BildScene")
         {
             Canvas canvas = GetComponent<Canvas>();
             canvas.enabled = true;
         }
+        else
+        {
+            Canvas canvas = GetComponent<Canvas>();
+            canvas.enabled = false;
+        }
+        if (SceneManager.GetActiveScene().name == "Boss") return;
+        Camera targetCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        if (targetCamera == null)
+        {
+            Debug.Log("ƒJƒƒ‰‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ");
+            return;
+        }
+        gameObject.GetComponent<Canvas>().worldCamera = targetCamera;
     }
 }
 

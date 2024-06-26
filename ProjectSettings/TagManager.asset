@@ -16,6 +16,10 @@ TagManager:
   - ItemBag
   - BagSlot
   - SelectSlot
+  - ArcanaBox_M1
+  - ArcanaBox_Q
+  - ArcanaBox_M0
+  - ArcanaBox_E
   layers:
   - Default
   - TransparentFX
@@ -50,6 +54,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackMovie
+    uniqueID: 346397095
+    locked: 0
   - name: UI
     uniqueID: 2666400687
     locked: 0

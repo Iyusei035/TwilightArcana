@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
     }
     public AudioSource audioSourceBGM;
     public AudioClip[] audioClipsBGM;
-
+    private int currentBGMNumber = 100;
     public void SetBgmVolume(float bgmVolume)
     {
         audioSourceBGM.volume = bgmVolume;
@@ -31,6 +31,12 @@ public class SoundManager : MonoBehaviour
 
     public void SetPlayBGM(int bgmNumber)
     {
+        currentBGMNumber = bgmNumber;
         audioSourceBGM.PlayOneShot(audioClipsBGM[bgmNumber]);
+    }
+
+    public int GetSoundNumber()
+    {
+        return currentBGMNumber;
     }
 }
