@@ -201,6 +201,27 @@ public class InMove : MonoBehaviour, IDamageable
     {
         animator.SetTrigger("Charge");
     }
+
+    //ÉèÅ[Évèàóù
+    public void Warp()
+    {
+        float WarpPower = 10;
+        UnityEngine.Vector3 position;
+        RaycastHit hit;
+        Debug.DrawRay(this.transform.position, this.transform.forward * WarpPower, Color.blue, 60.1f);
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, 8.0f))
+        {
+            position = hit.point;
+        }
+        else
+        {
+            position = this.transform.position + this.transform.forward * WarpPower;
+
+        }
+        this.transform.position = position;
+
+        Debug.Log("warp");
+    }
 }
 //using UnityEngine;
 

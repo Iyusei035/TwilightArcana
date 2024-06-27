@@ -44,11 +44,11 @@ public class Player_7_Chariot : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] Vector3 targetDirection; // Changed type to Vector3
-    [SerializeField, Min(0)] float time = 0.5f;
+    //[SerializeField, Min(0)] float time = 0.5f;
     [SerializeField] float lifeTime = 3.0f;
     [SerializeField] float Speed = 10.0f;
     [SerializeField] GameObject PlayerStand;
-    string StandName = "PlayerStand";
+   // string StandName = "PlayerStand";
     Vector3 position;
     Vector3 velocity;
     Vector3 acceleration;
