@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6144566089902362543}
   - component: {fileID: 7986212126014139382}
   - component: {fileID: 6724053252102203708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 513426694005905523}
   - component: {fileID: 3356024927823045490}
   - component: {fileID: 1724352508010552502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7003047322631071303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6704685322922861582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 6428261334644506573}
   - component: {fileID: 4997421973475660298}
   - component: {fileID: 5102676613125125400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 8241697119422325686}
   - component: {fileID: 1627532085314345220}
   - component: {fileID: 916961793799596886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 7140534725056243217}
   - component: {fileID: 8413267913659051525}
   - component: {fileID: 3520573530651938781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 4450059152043861833}
   - component: {fileID: 5012118540745620968}
   - component: {fileID: 6517027452983423832}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrontHarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 3373466477935289688}
   - component: {fileID: 869514967100454983}
   - component: {fileID: 6719059295706379662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 7920889376572813599}
   - component: {fileID: 4249603458915810738}
   - component: {fileID: 1450593631969120747}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 140616062281824424}
   - component: {fileID: 1659896646917416902}
   - component: {fileID: 3331994314033771195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2791364647748068164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1098,7 +1098,7 @@ GameObject:
   - component: {fileID: 8245082792622905073}
   - component: {fileID: 2421826395773856568}
   - component: {fileID: 1938322308829007533}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1206,7 +1206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1201397338675162913}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6019344854077794581}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CornerWallLvl6Merged (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 8668296734844480246}
   - component: {fileID: 6554344244956024445}
   - component: {fileID: 8005459325174193944}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1390,7 +1390,7 @@ GameObject:
   - component: {fileID: 6481169501725314432}
   - component: {fileID: 8511044118435410838}
   - component: {fileID: 1678168696809963565}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6213866298233216062}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1536,7 @@ GameObject:
   - component: {fileID: 5026330149690818788}
   - component: {fileID: 4854374364779495412}
   - component: {fileID: 3357577822704879978}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 9012932734090365662}
   - component: {fileID: 4997220100771751018}
   - component: {fileID: 6146854337769834430}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 3697191225058081365}
   - component: {fileID: 4665675170976109746}
   - component: {fileID: 7538619667558339697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9078485352921280233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1904,7 +1904,7 @@ GameObject:
   - component: {fileID: 8871560915698053527}
   - component: {fileID: 5090730610492317869}
   - component: {fileID: 4531439903185912215}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,7 +2015,7 @@ GameObject:
   - component: {fileID: 5581842818625910726}
   - component: {fileID: 7906314567266194}
   - component: {fileID: 4021190490125164362}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2123,7 +2123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 512368647751240089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2161,7 +2161,7 @@ GameObject:
   - component: {fileID: 7708968906975764119}
   - component: {fileID: 3343623390009341726}
   - component: {fileID: 4354308740273228614}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2272,7 +2272,7 @@ GameObject:
   - component: {fileID: 7602934489724862506}
   - component: {fileID: 3143850900456295690}
   - component: {fileID: 5038016411390096700}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2383,7 @@ GameObject:
   - component: {fileID: 1561648640749210613}
   - component: {fileID: 8200759435290696627}
   - component: {fileID: 3535063215158017844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3954222484971026350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2526,7 +2526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7808578561383815462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2561,7 +2561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45694363779213513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2599,7 +2599,7 @@ GameObject:
   - component: {fileID: 1476187595575777125}
   - component: {fileID: 5505112394841866817}
   - component: {fileID: 3525166706290297846}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +2707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2261810392861291765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2742,7 +2742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 798548192393553788}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,7 +2780,7 @@ GameObject:
   - component: {fileID: 7176652038153918593}
   - component: {fileID: 9039948923752392610}
   - component: {fileID: 2623355860570285853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2888,7 +2888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4818199688469625098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2966,7 +2966,7 @@ GameObject:
   - component: {fileID: 533766635038403258}
   - component: {fileID: 3651572412632672428}
   - component: {fileID: 7761095971532139228}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3077,7 +3077,7 @@ GameObject:
   - component: {fileID: 3746234823627151144}
   - component: {fileID: 321806567139962006}
   - component: {fileID: 8143341228716649324}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3188,7 +3188,7 @@ GameObject:
   - component: {fileID: 6208580620120551757}
   - component: {fileID: 7735094481823967852}
   - component: {fileID: 8214496179492189483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3299,7 +3299,7 @@ GameObject:
   - component: {fileID: 7559710995392732324}
   - component: {fileID: 6409669520596718218}
   - component: {fileID: 3887289228667702355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3407,7 +3407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105380772119777040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3445,7 +3445,7 @@ GameObject:
   - component: {fileID: 5858899908699340850}
   - component: {fileID: 5724295272459729371}
   - component: {fileID: 7418486473231636632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3556,7 +3556,7 @@ GameObject:
   - component: {fileID: 5541919456709391683}
   - component: {fileID: 4691558303556334525}
   - component: {fileID: 338776872427190589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,7 +3667,7 @@ GameObject:
   - component: {fileID: 5667306072697943481}
   - component: {fileID: 5292674471739258565}
   - component: {fileID: 1952128418590005842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +3778,7 @@ GameObject:
   - component: {fileID: 5612188152186548123}
   - component: {fileID: 3637583359917626283}
   - component: {fileID: 6234227319307915531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3889,7 +3889,7 @@ GameObject:
   - component: {fileID: 8324386586702160763}
   - component: {fileID: 6283586349550899996}
   - component: {fileID: 8860419663281098723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4000,7 +4000,7 @@ GameObject:
   - component: {fileID: 3123914851832281266}
   - component: {fileID: 7052101341790270256}
   - component: {fileID: 9031074013384221895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4111,7 +4111,7 @@ GameObject:
   - component: {fileID: 5038165925726027763}
   - component: {fileID: 5139800988348051273}
   - component: {fileID: 4796851724706887548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4222,7 +4222,7 @@ GameObject:
   - component: {fileID: 4251201804536361322}
   - component: {fileID: 2714545197759177425}
   - component: {fileID: 6917053891279904169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 7066237155979179507}
   - component: {fileID: 6504894920933700887}
   - component: {fileID: 4000389303840077390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4444,7 +4444,7 @@ GameObject:
   - component: {fileID: 690014855448554584}
   - component: {fileID: 6598194313824449608}
   - component: {fileID: 1793976909125443862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4555,7 +4555,7 @@ GameObject:
   - component: {fileID: 8109992278671576160}
   - component: {fileID: 7409273101560223850}
   - component: {fileID: 3286960087709580119}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4666,7 +4666,7 @@ GameObject:
   - component: {fileID: 3634106628837239128}
   - component: {fileID: 7399591266855390839}
   - component: {fileID: 3049306425348786866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4777,7 +4777,7 @@ GameObject:
   - component: {fileID: 8685952174822774942}
   - component: {fileID: 3042230827596887566}
   - component: {fileID: 1593108142402200095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,7 +4888,7 @@ GameObject:
   - component: {fileID: 7326270387545139563}
   - component: {fileID: 3237998573776712377}
   - component: {fileID: 1235904850129825687}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4999,7 +4999,7 @@ GameObject:
   - component: {fileID: 3582964672031839040}
   - component: {fileID: 4106725655224627496}
   - component: {fileID: 7286771220687827297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5107,7 +5107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8428499197488171943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CornerWallLvl6Merged (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5142,7 +5142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5735876889743759868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5177,7 +5177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8202920962571881536}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5215,7 +5215,7 @@ GameObject:
   - component: {fileID: 512969031715057946}
   - component: {fileID: 2074823703209586782}
   - component: {fileID: 4449791101851487725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5326,7 +5326,7 @@ GameObject:
   - component: {fileID: 6788424736355333236}
   - component: {fileID: 650884353490048004}
   - component: {fileID: 234514080125608408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2405495723303538130}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallGateHarrowDuble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5473,7 +5473,7 @@ GameObject:
   - component: {fileID: 4320648550597605449}
   - component: {fileID: 2665985884516387186}
   - component: {fileID: 9044486866367903851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5584,7 +5584,7 @@ GameObject:
   - component: {fileID: 6884687235727611882}
   - component: {fileID: 987880567104135690}
   - component: {fileID: 5717924527364453014}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5692,7 +5692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8255484841442462085}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5730,7 +5730,7 @@ GameObject:
   - component: {fileID: 4698495131296272952}
   - component: {fileID: 251027848760107328}
   - component: {fileID: 8648817218958739589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5841,7 +5841,7 @@ GameObject:
   - component: {fileID: 4940223748946210299}
   - component: {fileID: 8303807817664433842}
   - component: {fileID: 5343713005492227809}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5952,7 +5952,7 @@ GameObject:
   - component: {fileID: 4084434540637688801}
   - component: {fileID: 765484239789474238}
   - component: {fileID: 1095413060156567235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6060,7 +6060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6769201647411326290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6098,7 +6098,7 @@ GameObject:
   - component: {fileID: 165828285473609988}
   - component: {fileID: 7902657129828406741}
   - component: {fileID: 8545781711493055774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6209,7 +6209,7 @@ GameObject:
   - component: {fileID: 6579272454070386242}
   - component: {fileID: 629151970045699486}
   - component: {fileID: 937594943958236398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6320,7 +6320,7 @@ GameObject:
   - component: {fileID: 4537849288507739271}
   - component: {fileID: 1586126241703919678}
   - component: {fileID: 3915092449735603950}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6431,7 +6431,7 @@ GameObject:
   - component: {fileID: 6478900382137881825}
   - component: {fileID: 612724422797607953}
   - component: {fileID: 3071291665347001681}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6539,7 +6539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7491407022834253445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6574,7 +6574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6076584402213699254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6609,7 +6609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4570635977195499154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6647,7 +6647,7 @@ GameObject:
   - component: {fileID: 613638483843218580}
   - component: {fileID: 8928313103318795314}
   - component: {fileID: 4486704071208254868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrontHarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6758,7 +6758,7 @@ GameObject:
   - component: {fileID: 7754408826187549853}
   - component: {fileID: 6408396166538296149}
   - component: {fileID: 4390919361107536385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6869,7 +6869,7 @@ GameObject:
   - component: {fileID: 2146240688319976628}
   - component: {fileID: 8129658284535656864}
   - component: {fileID: 5316945707174596746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6980,7 +6980,7 @@ GameObject:
   - component: {fileID: 681973756925274673}
   - component: {fileID: 744424391076088401}
   - component: {fileID: 2283148168009434127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7088,7 +7088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5278138310435926817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7126,7 +7126,7 @@ GameObject:
   - component: {fileID: 100681634153594879}
   - component: {fileID: 3371252793645866142}
   - component: {fileID: 8145904139033266174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7233,7 +7233,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 974411668551393503}
-  m_Layer: 0
+  - component: {fileID: 8896951430496147228}
+  m_Layer: 3
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7257,6 +7258,37 @@ Transform:
   - {fileID: 8241697119422325686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8896951430496147228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053243998956941787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 48fe25ae1b286aa4a83f3edd71b66020, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &6064115227095550529
 GameObject:
   m_ObjectHideFlags: 0
@@ -7270,7 +7302,7 @@ GameObject:
   - component: {fileID: 8116433227342565907}
   - component: {fileID: 5009840623416386112}
   - component: {fileID: 2174968932889111972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7381,7 +7413,7 @@ GameObject:
   - component: {fileID: 1290443110529205294}
   - component: {fileID: 7878273242950859725}
   - component: {fileID: 6676718542885312364}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7489,7 +7521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7389857793337910395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CornerWallLvl6Merged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7527,7 +7559,7 @@ GameObject:
   - component: {fileID: 8208360120677128171}
   - component: {fileID: 717791230167974506}
   - component: {fileID: 2304272791324834302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7638,7 +7670,7 @@ GameObject:
   - component: {fileID: 2380960996780515372}
   - component: {fileID: 7415116680099191556}
   - component: {fileID: 1361407971286080486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7746,7 +7778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2297937105025999719}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7781,7 +7813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2119083451753300859}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7816,7 +7848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350682235532337263}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CornerWallLvl6Merged (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7854,7 +7886,7 @@ GameObject:
   - component: {fileID: 5692424649818159770}
   - component: {fileID: 3338033858573746520}
   - component: {fileID: 7367504373781501446}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BackHarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7965,7 +7997,7 @@ GameObject:
   - component: {fileID: 1230924680001566763}
   - component: {fileID: 5688935223904262082}
   - component: {fileID: 6508389811057006861}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8073,7 +8105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9153482172945015617}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8111,7 +8143,7 @@ GameObject:
   - component: {fileID: 1039228679612226512}
   - component: {fileID: 8325718496955522408}
   - component: {fileID: 7515314309516260745}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8222,7 +8254,7 @@ GameObject:
   - component: {fileID: 4398033102693659930}
   - component: {fileID: 2046655829677525818}
   - component: {fileID: 5982288124157409797}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8330,7 +8362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6416340021132761932}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8365,7 +8397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3993284947236504631}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8403,7 +8435,7 @@ GameObject:
   - component: {fileID: 6594937846975624992}
   - component: {fileID: 1220628570860704117}
   - component: {fileID: 2612496512154463203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8514,7 +8546,7 @@ GameObject:
   - component: {fileID: 1881080747622943703}
   - component: {fileID: 1544918638856717952}
   - component: {fileID: 6827423211271795663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8625,7 +8657,7 @@ GameObject:
   - component: {fileID: 9014125878937098906}
   - component: {fileID: 884767576019705780}
   - component: {fileID: 868235865068514234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8736,7 +8768,7 @@ GameObject:
   - component: {fileID: 6129459443560308961}
   - component: {fileID: 6851379126504629886}
   - component: {fileID: 2604824037495921060}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8844,7 +8876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5093205099536496273}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8882,7 +8914,7 @@ GameObject:
   - component: {fileID: 5982369626061919833}
   - component: {fileID: 2018949670784639316}
   - component: {fileID: 2617419363924560070}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BackHarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8993,7 +9025,7 @@ GameObject:
   - component: {fileID: 8414702049573609096}
   - component: {fileID: 8973182840142830582}
   - component: {fileID: 532713406959827007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9101,7 +9133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5479091968761859822}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9139,7 +9171,7 @@ GameObject:
   - component: {fileID: 3243984577175697770}
   - component: {fileID: 2094123477204891950}
   - component: {fileID: 2054296252573320477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9250,7 +9282,7 @@ GameObject:
   - component: {fileID: 657202627342985957}
   - component: {fileID: 5480068364055827096}
   - component: {fileID: 528112412295890237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9358,7 +9390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2738663973676315666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9396,7 +9428,7 @@ GameObject:
   - component: {fileID: 2921267847417659560}
   - component: {fileID: 3130058658763624555}
   - component: {fileID: 5377672442762400164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9504,7 +9536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6802292451918267949}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9539,7 +9571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6801003674209077509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9574,7 +9606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7031072971843072885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9609,7 +9641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1397576668009974265}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallGateHarrowDuble (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9648,7 +9680,7 @@ GameObject:
   - component: {fileID: 4243800747887702189}
   - component: {fileID: 544676193552063764}
   - component: {fileID: 2895224451529465276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9759,7 +9791,7 @@ GameObject:
   - component: {fileID: 2888433122328485634}
   - component: {fileID: 335180102291800308}
   - component: {fileID: 8270510835064075292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9870,7 +9902,7 @@ GameObject:
   - component: {fileID: 3156073899637408575}
   - component: {fileID: 7551634743660631152}
   - component: {fileID: 5720226189833825601}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9981,7 +10013,7 @@ GameObject:
   - component: {fileID: 8369239841209411750}
   - component: {fileID: 8663020188000337823}
   - component: {fileID: 228505412269213933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10092,7 +10124,7 @@ GameObject:
   - component: {fileID: 6879817284631092950}
   - component: {fileID: 2861627143685765782}
   - component: {fileID: 5503054998752182766}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10203,7 +10235,7 @@ GameObject:
   - component: {fileID: 7006253660887903232}
   - component: {fileID: 2217745156404252046}
   - component: {fileID: 136968087373514607}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10314,7 +10346,7 @@ GameObject:
   - component: {fileID: 3660597833786136429}
   - component: {fileID: 3876262603725801326}
   - component: {fileID: 2688650609382171331}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10422,7 +10454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7395488928086258414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10457,7 +10489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7345830149264121093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10495,7 +10527,7 @@ GameObject:
   - component: {fileID: 4433351401688295585}
   - component: {fileID: 8778300591999231647}
   - component: {fileID: 816067668649933203}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10606,7 +10638,7 @@ GameObject:
   - component: {fileID: 2008889543554362471}
   - component: {fileID: 8522336163187232767}
   - component: {fileID: 6691326875314777983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10717,7 +10749,7 @@ GameObject:
   - component: {fileID: 5644808297265841198}
   - component: {fileID: 7932771208589526988}
   - component: {fileID: 674992350879526086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10828,7 +10860,7 @@ GameObject:
   - component: {fileID: 4944809429954684850}
   - component: {fileID: 8636555611282107585}
   - component: {fileID: 5958170199745634090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10939,7 +10971,7 @@ GameObject:
   - component: {fileID: 822175701524714374}
   - component: {fileID: 2580623606635884307}
   - component: {fileID: 1189886599869311163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11050,7 +11082,7 @@ GameObject:
   - component: {fileID: 1242707430029905343}
   - component: {fileID: 1812863920022834100}
   - component: {fileID: 4437113738407264087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11158,7 +11190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1464638992114208310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11193,7 +11225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953673200559886401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walllvl6Merged (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,7 +17,7 @@ public class Arcana_0_TheFool : ArcanaBase
     // Start is called before the first frame update
     void Start()
     {
-        Player=GetComponent<InMove>();
+        Player= GameObject.FindGameObjectWithTag("Player").GetComponent<InMove>();
         playerTrn=GameObject.FindGameObjectWithTag("Player").transform;
         _prefabs = Resources.Load<GameObject>("0_TheFool/Bag");
     }
@@ -35,22 +35,22 @@ public class Arcana_0_TheFool : ArcanaBase
         
         GameObject bag= Instantiate(_prefabs, trans.position, Quaternion.identity);
     }
-    public void Warp()
-    {
+    //public void Warp()
+    //{
 
-        RaycastHit hit;
-        Debug.DrawRay(playerTrn.position, playerTrn.forward * WarpPower, Color.blue, 60.1f);
-        if (Physics.Raycast(playerTrn.position, playerTrn.forward, out hit, 8.0f))
-        {
-            position = hit.point;
-        }
-        else
-        {
-            position = playerTrn.position + playerTrn.forward * WarpPower;
+    //    RaycastHit hit;
+    //    Debug.DrawRay(playerTrn.position, playerTrn.forward * WarpPower, Color.blue, 60.1f);
+    //    if (Physics.Raycast(playerTrn.position, playerTrn.forward, out hit, 8.0f))
+    //    {
+    //        position = hit.point;
+    //    }
+    //    else
+    //    {
+    //        position = playerTrn.position + playerTrn.forward * WarpPower;
 
-        }
-        playerTrn.position = position;
+    //    }
+    //    playerTrn.position = position;
 
-        Debug.Log("warp");
-    }
+    //    Debug.Log("warp");
+    //}
 }

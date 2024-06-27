@@ -86,24 +86,33 @@ public class ArcanaSlot_Key : MonoBehaviour, IDropHandler
         OnClickCallback = onClickCallback;
     }
     /// スロットがクリックされたときに呼ばれるメソッド
+    //public void OnClicked()
+    //{
+    //    //このスロットにアイテムが存在している場合
+    //    if (Item != null)
+    //    {
+    //        // コールバックメソッドを実行
+    //        OnClickCallback(Item, Number, this.gameObject);
+    //        if (SceneManager.GetActiveScene().name == "BildScene")
+    //        {
+    //            Debug.Log("選択中のアイテムは" + Item.name + "です");
+    //        }
+    //    }
+    //    else if (SceneManager.GetActiveScene().name == "BildScene")
+    //    {
+    //        Debug.Log("選択中のアイテムは無です");
+    //    }
+    //}
     public void OnClicked()
     {
         //このスロットにアイテムが存在している場合
         if (Item != null)
         {
-            // コールバックメソッドを実行
-            OnClickCallback(Item, Number, this.gameObject);
-            if (SceneManager.GetActiveScene().name == "BildScene")
-            {
-                Debug.Log("選択中のアイテムは" + Item.name + "です");
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "BildScene")
-        {
-            Debug.Log("選択中のアイテムは無です");
+            var m0Slot = GameObject.FindGameObjectWithTag(_tagName).GetComponent<ArcanaBox_Key>();
+            if (m0Slot.GetItem() == null) return;
+            m0Slot.RemoveItem(Item.UniqueId, 1);
         }
     }
-
 
     public void OnDrop(PointerEventData pointerEventData)
     {
