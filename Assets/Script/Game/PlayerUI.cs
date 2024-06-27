@@ -18,8 +18,6 @@ public class PlayerUI : MonoBehaviour
         }
         else Debug.Log("ƒvƒŒƒCƒ„[‚ÆŒq‚ª‚è‚Ü‚¹‚ñ‚Å‚µ‚½");
     }
-
-    // Update is called once per frame
     void Update()
     {
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<InMove>();

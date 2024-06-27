@@ -20,6 +20,7 @@ TagManager:
   - ArcanaBox_Q
   - ArcanaBox_M0
   - ArcanaBox_E
+  - Pause
   layers:
   - Default
   - TransparentFX
