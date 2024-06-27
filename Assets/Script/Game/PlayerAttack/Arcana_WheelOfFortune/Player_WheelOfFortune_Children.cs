@@ -12,6 +12,10 @@ public class Player_WheelOfFortune_Children : MonoBehaviour
         {
             Debug.Log(gameObject.name + "|!Enemy!Hit");
             damageable.Damage(IsDamage);
+            Vector3 enemyVec = Vector3.zero;
+            var Target = collision.gameObject.GetComponent<Transform>();
+            enemyVec = Target.transform.position - gameObject.transform.position;
+            Target.transform.position = Target.transform.position + enemyVec.normalized;
         }
     }
 }
