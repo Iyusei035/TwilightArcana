@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 619115701539035196}
   - component: {fileID: 6965168488305277060}
   - component: {fileID: 9141998972175452287}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SceneFade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -389660597
+  m_SortingLayerID: 902133957
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &619115701539035196
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4458258478625349846}
   - component: {fileID: 7252012616614914921}
   - component: {fileID: 377314678993911058}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.5377358, g: 0.4946155, b: 0.4946155, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
