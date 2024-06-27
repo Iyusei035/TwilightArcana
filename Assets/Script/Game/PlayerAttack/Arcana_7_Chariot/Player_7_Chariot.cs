@@ -83,7 +83,7 @@ public class Player_7_Chariot : MonoBehaviour
         {
             Debug.Log("!Enemy!Hit");
             damageable.Damage((int)IsDamage);
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 
