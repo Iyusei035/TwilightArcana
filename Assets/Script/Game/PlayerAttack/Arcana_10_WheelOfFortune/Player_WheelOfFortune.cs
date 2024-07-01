@@ -1,3 +1,4 @@
+using FlMr_Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class Player_WheelOfFortune : MonoBehaviour
 {
     Transform player = null;
     private float angle;
+    [SerializeField] private ItemBase item;
     [SerializeField] private float rotateSpeed = 180f;
     [SerializeField] private Vector3 distanceFromTarget = new Vector3(0.0f, 0.0f, 2.5f);
     private void Update()
@@ -16,15 +18,22 @@ public class Player_WheelOfFortune : MonoBehaviour
         angle += rotateSpeed * Time.deltaTime;
         angle = Mathf.Repeat(angle, 360f);
     }
-
-    private int IsDamage = 1;
     private void OnCollisionEnter(Collision collision)
     {
         IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log(gameObject.name + "|!Enemy!Hit");
-            damageable.Damage(IsDamage);
+            float fProbabilityRate = UnityEngine.Random.value * 100.0f;
+            if (50 == 100.0f && fProbabilityRate == 50)
+            {
+                damageable.Damage(item.GetBasicDamage());
+            }
+            else if (fProbabilityRate < 50)
+            {
+                damageable.Damage(item.GetBasicDamage());
+            }
+            Debug.Log(item.name + "|" + item.GetBasicDamage());
             Vector3 enemyVec = Vector3.zero;
             var Target = collision.gameObject.GetComponent<Transform>();
             enemyVec = Target.transform.position - gameObject.transform.position;

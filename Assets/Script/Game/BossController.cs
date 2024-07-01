@@ -215,16 +215,6 @@ public class BossController : MonoBehaviour,IDamageable
         //ボス当たり判定
         capsuleCollider.enabled = true;
 
-        //デバック用:ボスのHPを半分にする
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Hp = maxHp / 2;
-            Debug.Log(Hp);
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Death();
-        }
 
         //第二形態移行関数
         SecondForm();
