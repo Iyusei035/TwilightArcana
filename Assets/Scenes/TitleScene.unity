@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f760a42c2ccf1488bb77cb57ff208f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNameList: 1
+  sceneNameList: 3
 --- !u!1 &650587840
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,16 +847,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
+      propertyPath: m_fontSize
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 05cc6dc3278dd1d43bbd0261140d76e3,
         type: 2}
     - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
+      propertyPath: m_fontSizeBase
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2522223068349337288, guid: 05cc6dc3278dd1d43bbd0261140d76e3,
         type: 2}
+    - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 557462910801049182, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -994,10 +1009,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -5.0157986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 05cc6dc3278dd1d43bbd0261140d76e3,
         type: 2}
+    - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3310548911267316033, guid: 270e13dc202db1945bb29d42f6560549,
         type: 3}
       propertyPath: m_sharedMaterial

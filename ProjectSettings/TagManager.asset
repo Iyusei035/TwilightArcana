@@ -16,6 +16,10 @@ TagManager:
   - ItemBag
   - BagSlot
   - SelectSlot
+  - ArcanaBox_M0
+  - ArcanaBox_M1
+  - ArcanaBox_Q
+  - ArcanaBox_E
   layers:
   - Default
   - TransparentFX
