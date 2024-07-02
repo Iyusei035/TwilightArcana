@@ -54,7 +54,6 @@ public class InMove : MonoBehaviour, IDamageable
         {
             Death();
         }
-        Debug.Log( Hp);
     }
 
     public float GetPlayerHP()

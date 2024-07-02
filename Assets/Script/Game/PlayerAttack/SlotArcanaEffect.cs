@@ -13,7 +13,6 @@ public class SlotArcanaEffect : MonoBehaviour
     {
         for (int count = 0; gameObjects.Count > count; ++count)
         {
-            Debug.Log(count);
             if (gameObjects[count] == null) return;
             if (gameObjects[count].GetComponent<GameSceneInventory>() == null) return;
             initFlg = true;

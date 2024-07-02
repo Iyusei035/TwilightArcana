@@ -24,6 +24,7 @@ public class CameraFollow : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         cam = Camera.main.transform;
+        Debug.Log(senstivity);
     }
     void Update()
     {
@@ -49,9 +50,18 @@ public class CameraFollow : MonoBehaviour
     void CameraTargetRotation()
     {
         Vector2 mouseAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        rotX += (mouseAxis.x * senstivity) * Time.deltaTime;
-        rotY -= (mouseAxis.y * senstivity) * Time.deltaTime;
-
+        if (SensitivityManager.instance != null)
+        {
+            rotX += (mouseAxis.x * SensitivityManager.instance.GetSensitivity()) * Time.deltaTime;
+            rotY -= (mouseAxis.y * SensitivityManager.instance.GetSensitivity()) * Time.deltaTime;
+            Debug.Log(rotX + "|" + rotY);
+        }
+        else
+        {
+            rotX += (mouseAxis.x * senstivity) * Time.deltaTime;
+            rotY -= (mouseAxis.y * senstivity) * Time.deltaTime;
+            Debug.Log(rotX + "|" + rotY);
+        }
         rotY = Mathf.Clamp(rotY, clampAxis.x, clampAxis.y);
 
         Quaternion localRotation = Quaternion.Euler(rotY, rotX, 0);

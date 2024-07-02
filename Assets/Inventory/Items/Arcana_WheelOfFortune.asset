@@ -19,5 +19,5 @@ MonoBehaviour:
   arcanaBase: {fileID: -1681866319337843452, guid: 7bf7fd77f1d036740b92fd924653cc6a,
     type: 3}
   maxCoolTime: 5
-  BasicDamage: 10
+  BasicDamage: 1
   arcanaType: 1

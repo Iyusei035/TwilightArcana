@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fcc49f98a92044cbb0031fbb47d646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 4dcf9fd5952b1534d94fc52f3159b20f, type: 2}
   rotateSpeed: 150
   distanceFromTarget: {x: 0, y: 2, z: 4}
 --- !u!54 &3861477594933275039
@@ -300,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e3af6cd1189524ba2e789a553c8252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 4dcf9fd5952b1534d94fc52f3159b20f, type: 2}
 --- !u!1 &5256727468899986134
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,3 +450,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e3af6cd1189524ba2e789a553c8252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 4dcf9fd5952b1534d94fc52f3159b20f, type: 2}

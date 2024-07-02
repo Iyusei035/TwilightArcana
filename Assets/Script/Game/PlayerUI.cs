@@ -11,12 +11,7 @@ public class PlayerUI : MonoBehaviour
     void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<InMove>();
-        if (player)
-        {
-            Debug.Log("プレイヤーと繋がりました");
-            Debug.Log(player.GetPlayerHP());
-        }
-        else Debug.Log("プレイヤーと繋がりませんでした");
+        if (player == null) Debug.Log("プレイヤーと繋がりませんでした");
     }
     void Update()
     {

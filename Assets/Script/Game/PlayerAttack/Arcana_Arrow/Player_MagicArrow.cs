@@ -109,7 +109,7 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
     Vector3 velocity;
     Vector3 acceleration;
     Transform thisTransform;
-    [SerializeField] float trackingRadius = 10.0f;
+    //[SerializeField] float trackingRadius = 10.0f;
     [SerializeField] int IsDamage = 1;
     void Start()
     {
