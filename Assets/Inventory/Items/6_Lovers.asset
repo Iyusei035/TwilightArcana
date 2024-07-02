@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d04663f57ab7fac4d95e0539feee4e3c, type: 3}
-  m_Name: Arcana_Arrow
+  m_Script: {fileID: 11500000, guid: de1f98eac29292e4099178b8c4073962, type: 3}
+  m_Name: 6_Lovers
   m_EditorClassIdentifier: 
-  uniqueId: 3
-  itemName: Arrow
-  icon: {fileID: 21300000, guid: be3b09ca069e77f4da2814952874210d, type: 3}
-  description: "\u9B54\u6CD5\u306E\u77E2\u3092\u653E\u3064"
+  uniqueId: 2
+  itemName: Lovers
+  icon: {fileID: 21300000, guid: b6cb2a28dc4d64e4995ac6d6b381dea3, type: 3}
+  description: "\u30BF\u30EC\u30C3\u30C8\u3092\u751F\u6210"
   arcanaBase: {fileID: -5782153747566148220, guid: d1bf7703d59c07e4ba0fcc15d4173bb2,
     type: 3}
-  maxCoolTime: 2
+  maxCoolTime: 10
   BasicDamage: 10
   arcanaType: 1

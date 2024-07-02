@@ -53,7 +53,7 @@ public class Player_7_Chariot : MonoBehaviour
     Vector3 velocity;
     Vector3 acceleration;
     Transform thisTransform;
- 
+    float knockbackPower;
     [SerializeField] int IsDamage = 10;
     void Start()
     {
@@ -83,7 +83,12 @@ public class Player_7_Chariot : MonoBehaviour
         {
             Debug.Log("!Enemy!Hit");
             damageable.Damage((int)IsDamage);
-           // Destroy(gameObject);
+            //プレイヤーのノックバック処理
+            knockbackPower = 50;
+            collision.rigidbody.velocity = Vector3.zero;
+            Vector3 distination = (collision.transform.position - transform.position).normalized;
+            distination.y = 0;
+            collision.rigidbody.AddForce(distination * knockbackPower, ForceMode.VelocityChange);
         }
     }
 

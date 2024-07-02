@@ -16,9 +16,8 @@ public class Arcana_MagicArrow : ArcanaBase
         _prefab = (GameObject)Resources.Load("Arrow/Arrow");
         _effect = _prefab.GetComponent<VisualEffect>();
        // _pos = _player.transform.position;
-        _shotEffect = Instantiate(_effect, _pos, Quaternion.identity);
-        //_playerObject = _player.gameObject;
-        //Debug.Log(_shotEffect.name + ":" + _pos + ":" + _effect.name + ":" + _playerObject.name);
+        _shotEffect = Instantiate(_effect, _pos, Quaternion.Euler(0,4,0));
+
         SetUp();
     }
 
