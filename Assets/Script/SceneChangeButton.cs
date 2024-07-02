@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -66,7 +67,13 @@ public class SceneChangeButton : MonoBehaviour
                     break;
             }
             if (sceneName == null) return;
-            SceneManager.LoadScene(sceneName);
+            ArcanaSlotaCheck();
+            if (sceneNameList != SceneNameList.Game || itemCheck)
+            {
+                Debug.Log(sceneNameList);
+                SceneManager.LoadScene(sceneName);
+                itemCheck = false;
+            }
         }
     }
     private void Update()
@@ -86,6 +93,25 @@ public class SceneChangeButton : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
                 fadeManager.In = true;
                 fadeManager.Completion = false;
+            }
+        }
+        if (GameObject.FindGameObjectWithTag("ItemBox") != null) return;
+    }
+
+    private bool itemCheck = false;
+    public void ArcanaSlotaCheck()
+    {
+        if (GameObject.Find("ItemBox") == null) return;
+        var slotM0 = GameObject.Find("ArcanaBox_M0").GetComponent<ArcanaBox_Key>();
+        var slotM1 = GameObject.Find("ArcanaBox_M1").GetComponent<ArcanaBox_Key>();
+        var slotQ = GameObject.Find("ArcanaBox_Q").GetComponent<ArcanaBox_Key>();
+        var slotE = GameObject.Find("ArcanaBox_E").GetComponent<ArcanaBox_Key>();
+        ArcanaBox_Key[] allSlots = new ArcanaBox_Key[] { slotM0, slotM1, slotQ, slotE };
+        for (int count = 0; count < allSlots.Count(); ++count)
+        {
+            if (allSlots[count].GetItem())
+            {
+                itemCheck = true;
             }
         }
     }

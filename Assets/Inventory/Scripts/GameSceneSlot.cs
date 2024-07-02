@@ -71,7 +71,7 @@ namespace FlMr_Inventory
                 shutOut.rectTransform.sizeDelta =
                     new Vector2
                     (
-                        shutOut.rectTransform.rect.width, shutOut.rectTransform.rect.width - (coolTimeCount * 8)
+                        shutOut.rectTransform.rect.width, shutOut.rectTransform.rect.width - (coolTimeCount * 10)
                         );
             }
             else
