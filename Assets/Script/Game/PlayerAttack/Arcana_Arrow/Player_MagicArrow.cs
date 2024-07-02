@@ -92,12 +92,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.VFX;
 
 public class Player_MagicArrow : MonoBehaviour,IDamageable
 {
     [SerializeField] GameObject Player;
-    [SerializeField] Vector3 targetDirection; // Changed type to Vector3
+    [SerializeField] Vector3 targetDirection;//=new Vector3(0,1,0); // Changed type to Vector3
     [SerializeField, Min(0)] float time = 0.5f;
     [SerializeField] float lifeTime = 1.0f;
     [SerializeField] bool limitAcceleration = false;
@@ -121,26 +122,30 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
         }
         else
         {
-            targetDirection = Player.transform.forward; // If enemy target is null, set direction to player's forward direction
+            //Debug.Log("EnemyTarget_NULL");
+            targetDirection=Player.transform.forward;
+            //Debug.Log("Player Forward: " + Player.transform.forward);
         }
 
         thisTransform = transform;
         position = Player.transform.position + new Vector3(0, 2, 0);
         thisTransform = transform;
         velocity = new Vector3(Random.Range(minInitVelocity.x, maxInitVelocity.x), Random.Range(minInitVelocity.y, maxInitVelocity.y), Random.Range(minInitVelocity.z, maxInitVelocity.z));
+        Debug.Log("Initial Velocity: " + velocity);
         StartCoroutine(nameof(Timer));
         Effect.SendEvent("StartEffect");
     }
 
     public void Update()
     {
+        //acceleration = 2f / (time * time) * (targetDirection - position - time * velocity);
         acceleration = 2f / (time * time) * (targetDirection - position - time * velocity);
-
+        //Debug.Log("Acceleration: " + acceleration);
         if (limitAcceleration && acceleration.sqrMagnitude > maxAcceleration * maxAcceleration)
         {
             acceleration = acceleration.normalized * maxAcceleration;
         }
-
+        Debug.Log("TargetDir : "+targetDirection);
         time -= Time.deltaTime;
 
         if (time < 0f)
@@ -153,7 +158,7 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
         thisTransform.position = position;
         thisTransform.rotation = Quaternion.LookRotation(velocity);
 
-        thisTransform.Rotate(0, 0, 100);
+       // thisTransform.Rotate(0, 0, 100);
 
     }
     private void OnCollisionEnter(Collision collision)

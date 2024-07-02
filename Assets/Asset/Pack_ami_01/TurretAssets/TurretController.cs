@@ -38,8 +38,9 @@ public class TurretController : MonoBehaviour
         // 検出されたコライダーをチェックして、最も近い敵を見つける
         foreach (Collider hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("EnemyTarget"))
             {
+                Debug.Log("target");
                 float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
                 if (distance < closestDistance)
                 {
