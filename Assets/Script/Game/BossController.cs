@@ -93,7 +93,7 @@ public class BossController : MonoBehaviour,IDamageable
     private bool jump=false;
 
     //その他
-    public int hp = 0;
+    public float hp = 0;
     private float coolTime = 0;
     private GameObject player;
     private GameObject hitEffect;
@@ -139,7 +139,7 @@ public class BossController : MonoBehaviour,IDamageable
     //死亡時間調整
     WaitForSeconds deadEffectWait;
 
-    public int Hp
+    public float Hp
     {
         //ボスのHP
         set
@@ -232,7 +232,7 @@ public class BossController : MonoBehaviour,IDamageable
         Hp = maxHp;
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         if (isDead) { return;}
         //ボスダメージ処理

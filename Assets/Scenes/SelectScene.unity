@@ -252,6 +252,12 @@ PrefabInstance:
       propertyPath: freeLookCamera
       value: 
       objectReference: {fileID: 1803016272}
+    - target: {fileID: 8302131726803318431, guid: e2e04f35da9467d47a4bea4259045835,
+        type: 3}
+      propertyPath: Effect
+      value: 
+      objectReference: {fileID: 3874635022589376825, guid: ee0c4e6046395bd46b7d10a8edcbd32f,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
