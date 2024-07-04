@@ -67,6 +67,7 @@ namespace FlMr_Inventory
 
         public void OnBeginDrag(PointerEventData pointerEventData)
         {
+            if (Item == null) return;
             var box = GameObject.FindGameObjectWithTag("ItemBox").GetComponent<ItemBox>();
             if (box.ArcanaSlotaCheck(Item.UniqueId)) return;
             CreateDragObject();
@@ -75,6 +76,7 @@ namespace FlMr_Inventory
 
         public void OnDrag(PointerEventData pointerEventData)
         {
+            if (Item == null) return;
             var box = GameObject.FindGameObjectWithTag("ItemBox").GetComponent<ItemBox>();
             if (box.ArcanaSlotaCheck(Item.UniqueId)) return;
             draggingObject.transform.position = pointerEventData.position;
@@ -82,6 +84,7 @@ namespace FlMr_Inventory
 
         public void OnEndDrag(PointerEventData pointerEventData)
         {
+            if (Item == null) return;
             var box = GameObject.FindGameObjectWithTag("ItemBox").GetComponent<ItemBox>();
             if (box.ArcanaSlotaCheck(Item.UniqueId)) return;
             Destroy(draggingObject);
