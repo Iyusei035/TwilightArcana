@@ -20,6 +20,7 @@ public class InMove : MonoBehaviour, IDamageable
     [SerializeField] CapsuleCollider coll;
     //private GameObject[] hitEffects;
     [SerializeField] GameObject HealingEffect;
+    [SerializeField] GameObject Effect;
     public AudioClip HealAudio;
     [SerializeField] int HealingCount=5;
     [SerializeField] int HealPower = 45;
@@ -40,7 +41,7 @@ public class InMove : MonoBehaviour, IDamageable
         }
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         
         if (value <= 0)
@@ -129,6 +130,10 @@ public class InMove : MonoBehaviour, IDamageable
 
 
             }
+            if(Input.GetKeyDown(KeyCode.O))
+            {
+                IsEffect();
+            }
         }
 
         //ˆÚ“®•ûŒü‚ðŒü‚­
@@ -166,7 +171,12 @@ public class InMove : MonoBehaviour, IDamageable
         Instantiate(HealingEffect, _pos,PlayerRot);
         
     }
-
+    public void IsEffect()
+    {
+        UnityEngine.Vector3 _pos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        UnityEngine.Quaternion PlayerRot = GameObject.FindGameObjectWithTag("Player").transform.rotation;
+        Instantiate(Effect, _pos, PlayerRot);
+    }
 
     void Healing()
     {

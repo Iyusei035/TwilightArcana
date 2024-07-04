@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Scarecrow : MonoBehaviour,IDamageable
 {
-    public int Scarecrow_hp=1000;
+    public float Scarecrow_hp=1000;
     public int Count = 10;
     public Vector3 startPos;
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class Scarecrow : MonoBehaviour,IDamageable
     {
         
     }
-    public void Damage(int value)
+    public void Damage(float value)
     {
         Scarecrow_hp-=value;
         Debug.Log(Scarecrow_hp);

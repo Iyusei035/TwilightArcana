@@ -9,6 +9,6 @@ public class Player_17_TheStar_Hit : MonoBehaviour
         if (other == null) return;
         if (!GameObject.FindGameObjectWithTag("Enemy")) return;
         var enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>();
-        if (other.CompareTag(enemy.tag)) enemy.Damage(item.GetBasicDamage());
+        if (other.CompareTag(enemy.tag)) enemy.Damage(item.GetArcanaDamage());
     }
 }

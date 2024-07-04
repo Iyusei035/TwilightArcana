@@ -13,7 +13,7 @@ public class Player_SnowShield : MonoBehaviour,IDamageable
     //　ターゲットからの距離
     [SerializeField] private Vector3 distanceFromTarget = new Vector3(0.0f, 0.0f, 2.5f);
 
-    void IDamageable.Damage(int value)
+    void IDamageable.Damage(float value)
     {
         
     }

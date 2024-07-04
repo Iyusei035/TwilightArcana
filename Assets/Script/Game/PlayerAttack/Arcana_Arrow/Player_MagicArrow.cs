@@ -184,7 +184,7 @@ public class Player_MagicArrow : MonoBehaviour,IDamageable
 
     }
 
-    void IDamageable.Damage(int value)
+    void IDamageable.Damage(float value)
     {
         
     }

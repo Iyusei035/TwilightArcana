@@ -50,7 +50,7 @@ public class WizardRedMove : MonoBehaviour, IDamageable
     private Transform defaultTarget;
     private bool isAttacking = false;
     private bool isDead = false;
-    public int hp = 0;
+    public float hp = 0;
 
     public float coolTime = 0;
 
@@ -60,7 +60,7 @@ public class WizardRedMove : MonoBehaviour, IDamageable
     private float deadWaitTime = 7;
 
 
-    public int Hp
+    public float Hp
     {
         set
         {
@@ -120,7 +120,7 @@ public class WizardRedMove : MonoBehaviour, IDamageable
         Hp = maxHp;
     }
 
-    public void Damage(int value)
+    public void Damage(float value)
     {
         if (isDead) { return; }
         if (value <= 0) { return; }

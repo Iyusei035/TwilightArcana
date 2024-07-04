@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - EFFECT_BUMP
   - _ALPHABLEND_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -21,7 +20,8 @@ Material:
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - GRABPASS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -68,15 +68,15 @@ Material:
     - _BumpScale: 1
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
-    - _CameraNearFadeDistance: 0
+    - _CameraNearFadeDistance: 1
     - _ColorMode: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortionBlend: 0
-    - _DistortionEnabled: 1
+    - _DistortionBlend: 0.5
+    - _DistortionEnabled: 0
     - _DistortionStrength: 1
-    - _DistortionStrengthScaled: 0.1
+    - _DistortionStrengthScaled: 0
     - _DstBlend: 10
     - _EmissionEnabled: 0
     - _FlipbookMode: 0
@@ -99,7 +99,7 @@ Material:
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 3.4415905, g: 3.4415905, b: 3.4415905, a: 1}
-    - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
+    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
