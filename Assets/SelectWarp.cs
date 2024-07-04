@@ -23,7 +23,7 @@ public class SelectWarp : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Text.gameObject.GetComponent<TextMeshProUGUI>().enabled = true;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 SceneManager.LoadScene("Boss");
                 Cursor.visible = true;

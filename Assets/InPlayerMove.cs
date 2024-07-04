@@ -49,11 +49,16 @@ public class InMove : MonoBehaviour, IDamageable
         }
 
         Protect();
-        Hp -= (float)value*protect;
+        if (!GameObject.Find("ForceField(Clone)"))
+        Hp -= (float)value * protect;
+        else if (GameObject.Find("ForceField(Clone)").GetComponent<Player_Hermit>())
+        GameObject.Find("ForceField(Clone)").GetComponent<Player_Hermit>().DeleteHermit();
         if (Hp <= 0)
         {
             Death();
         }
+
+        
         Debug.Log( Hp);
     }
 

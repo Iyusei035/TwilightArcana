@@ -1,39 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UIElements;
-//using UnityEngine.VFX;
-
-//public class Player_7_Chariot : MonoBehaviour
-//{
-//    GameObject Player;
-//    public Rigidbody rb;
-//    float IsDamage = 20;
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-//        Player = GameObject.FindGameObjectWithTag("Player");
-//        rb=this.GetComponent<Rigidbody>();
-//    }
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        rb.velocity = Player.transform.forward * 10.0f;
-//    }
-
-//    private void OnCollisionEnter(Collision collision)
-//    {
-//        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
-//        if (collision.gameObject.tag == "Enemy")
-//        {
-//            Debug.Log("!Enemy!Hit");
-//            damageable.Damage((int)IsDamage);
-//            Destroy(gameObject);
-//        }
-//    }
-//}
-
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;

@@ -7136,6 +7136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3217423159483580038, guid: 6f0515baabad15e4189ac794fb2c37c7,
         type: 3}
+      propertyPath: m_IgnoreTag
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217423159483580038, guid: 6f0515baabad15e4189ac794fb2c37c7,
+        type: 3}
       propertyPath: m_CollideAgainst.m_Bits
       value: 9
       objectReference: {fileID: 0}
