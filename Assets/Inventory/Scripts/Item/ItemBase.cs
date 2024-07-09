@@ -13,6 +13,7 @@ namespace FlMr_Inventory
         [SerializeField] private float basicDamage = 10;
         [SerializeField] private float buffValue = 1.5f;
         [SerializeField] private float badBuffValue = 0.5f;
+        [SerializeField] private float damageValue_randMax = 10;
         private float coolTime = 0;
         private bool activeFlg = true;
         private bool buffFlg = false;
@@ -24,7 +25,12 @@ namespace FlMr_Inventory
             Ex
         }
         public ArcanaType arcanaType;
-
+        public enum DamageType
+        {
+            Normal,
+            Constant
+        }
+        public DamageType damageType = DamageType.Normal;
         /// ƒAƒCƒeƒ€‚ÌŽí—Þ‚Æ1:1‘Î‰ž‚·‚é®”
         public int UniqueId => uniqueId;
 
@@ -77,21 +83,25 @@ namespace FlMr_Inventory
         }
         public float GetArcanaDamage()
         {
-            if (!badBuffFlg && !buffFlg) return basicDamage;
-            else if (buffFlg && !badBuffFlg)
-            {
-                float damage = basicDamage * buffValue;
-                return damage;
-            }
-            else if (badBuffFlg && !buffFlg)
-            {
-                float damage = basicDamage * badBuffValue;
-                return damage;
-            }
+            if (damageType == DamageType.Constant) return basicDamage;
             else
             {
-                float damage = basicDamage * (buffValue - badBuffValue);
-                return damage;
+                if (!badBuffFlg && !buffFlg) return basicDamage;
+                else if (buffFlg && !badBuffFlg)
+                {
+                    float damage = basicDamage * buffValue;
+                    return damage;
+                }
+                else if (badBuffFlg && !buffFlg)
+                {
+                    float damage = basicDamage * badBuffValue;
+                    return damage;
+                }
+                else
+                {
+                    float damage = basicDamage * (buffValue - badBuffValue);
+                    return damage;
+                }
             }
         }
         public int SetId(int id)
@@ -108,5 +118,19 @@ namespace FlMr_Inventory
         }
         public bool GetBadBuffFlg()
         { return badBuffFlg; }
+        public float GetArcanaRandDamage()
+        {
+            float damage;
+            float fProbabilityRate = UnityEngine.Random.value * 100.0f;
+            if ((10 == 100.0f && fProbabilityRate == 10) || fProbabilityRate < 10)
+                damage = damageValue_randMax;
+            else if ((20 == 100.0f && fProbabilityRate == 20) || fProbabilityRate < 20)
+                damage = damageValue_randMax * 0.75f;
+            else if ((30 == 100.0f && fProbabilityRate == 30) || fProbabilityRate < 30)
+                damage = damageValue_randMax * 0.50f;
+            else
+                damage = damageValue_randMax * 0.25f;
+            return damage;
+        }
     }
 }

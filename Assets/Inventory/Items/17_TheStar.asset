@@ -19,5 +19,9 @@ MonoBehaviour:
   arcanaBase: {fileID: 1556603822640924313, guid: de0935eae52fc9049b1fcae440510c1a,
     type: 3}
   maxCoolTime: 1
-  BasicDamage: 1
+  basicDamage: 10
+  buffValue: 1.5
+  badBuffValue: 0.5
+  damageValue_randMax: 10
   arcanaType: 0
+  damageType: 1
