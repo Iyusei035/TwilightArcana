@@ -12,6 +12,10 @@ public class InMove : MonoBehaviour, IDamageable
 {
     [SerializeField] private Charadata data;
     float hp = 0;
+    float sp = 0;
+    public float ReSp=0.15f;
+    public float DashSp;
+    private float spMax = 100;
     static int hashAttackType = Animator.StringToHash("AttackType");
     public float PlayerMovePower = 0;
     Animator animator;
@@ -40,7 +44,14 @@ public class InMove : MonoBehaviour, IDamageable
             }
         }
     }
-
+    public float Sp
+    {
+        get { return sp; }
+        set
+        {
+            sp = Mathf.Clamp(value, 0, spMax);
+        }
+    }
     public void Damage(float value)
     {
         
@@ -68,6 +79,10 @@ public class InMove : MonoBehaviour, IDamageable
         return hp;
     }
 
+    public float GetPlayerSP()
+    {
+        return sp;
+    }
     public void Death()
     {
         //Destroy(gameObject);
@@ -92,6 +107,7 @@ public class InMove : MonoBehaviour, IDamageable
         //コンポーネント関連付け
         TryGetComponent(out animator);
         hp = data.MAXHP;
+        sp = spMax;
         coll = GetComponent<CapsuleCollider>();
         audioSource = GetComponent<AudioSource>();
     }
@@ -105,8 +121,26 @@ public class InMove : MonoBehaviour, IDamageable
         var horizontalRotation = UnityEngine.Quaternion.AngleAxis(Camera.main.transform.transform.eulerAngles.y, UnityEngine.Vector3.up);
         var velocity = horizontalRotation * new UnityEngine.Vector3(horizontal, 0, vertical).normalized;
 
+        //スタミナの管理
+        sp+=(float)ReSp;
+        if (sp >= spMax)
+        {
+            sp = spMax;
+        }
+
         //速度の取得
-        var speed = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
+        //var speed = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
+        var speed = 1;
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 2;
+            sp -= DashSp;
+            if(sp<=0)
+            {
+                speed = 1;
+            }
+        }
+
         var rotationSpeed = PlayerMovePower * Time.deltaTime;
 
         {
@@ -115,6 +149,7 @@ public class InMove : MonoBehaviour, IDamageable
                 animator.SetTrigger("Rolling");
                 coll.enabled = false;
                 inv = 1.5f;
+                sp -= (float)30;
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
