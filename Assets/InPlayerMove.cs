@@ -14,7 +14,7 @@ public class InMove : MonoBehaviour, IDamageable
     float hp = 0;
     float sp = 0;
     public float ReSp=0.15f;
-    public float DashSp;
+    float DashSp=0.25f;
     private float spMax = 100;
     static int hashAttackType = Animator.StringToHash("AttackType");
     public float PlayerMovePower = 0;
@@ -127,7 +127,10 @@ public class InMove : MonoBehaviour, IDamageable
         {
             sp = spMax;
         }
-
+        if(sp <= 0)
+        {
+            sp = 0;
+        }
         //‘¬“x‚ÌŽæ“¾
         //var speed = Input.GetKey(KeyCode.LeftShift) ? 2 : 1;
         var speed = 1;
@@ -146,6 +149,7 @@ public class InMove : MonoBehaviour, IDamageable
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (sp <= 0) return;
                 animator.SetTrigger("Rolling");
                 coll.enabled = false;
                 inv = 1.5f;
