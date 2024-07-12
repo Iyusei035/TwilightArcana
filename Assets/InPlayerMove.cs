@@ -31,6 +31,8 @@ public class InMove : MonoBehaviour, IDamageable
     public AudioClip FootSound;
     float protect=1;
     AudioSource audioSource;
+
+    public bool Invincible = false;
     public float Hp
     {
         get { return hp; }
@@ -54,7 +56,7 @@ public class InMove : MonoBehaviour, IDamageable
     }
     public void Damage(float value)
     {
-        
+        if (Invincible) return;
         if (value <= 0)
         {
             return;
@@ -71,7 +73,7 @@ public class InMove : MonoBehaviour, IDamageable
         }
 
         
-        Debug.Log( Hp);
+        //Debug.Log( Hp);
     }
 
     public float GetPlayerHP()
@@ -173,6 +175,10 @@ public class InMove : MonoBehaviour, IDamageable
             {
                 IsEffect();
             }
+            if(Input.GetKey(KeyCode.P))
+            {
+                BecomeInvincible(1.0f);
+            }
         }
 
         //ˆÚ“®•ûŒü‚ðŒü‚­
@@ -233,10 +239,11 @@ public class InMove : MonoBehaviour, IDamageable
 
     private void DebugKey()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha5))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.LoadScene("BildScene");
-
+            UnityEngine.Cursor.visible = true;
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
         }
         //if (Input.GetKeyDown(KeyCode.Alpha4))
         //{
@@ -255,6 +262,19 @@ public class InMove : MonoBehaviour, IDamageable
     {
         animator.SetTrigger("Charge");
     }
+
+    public void BecomeInvincible(float duration)
+    {
+        StartCoroutine(Invincibility(duration));
+    }
+
+    IEnumerator Invincibility(float duration)
+    {
+        Invincible = true;
+        yield return new WaitForSeconds(duration);
+        Invincible = false;
+    }
+
 
     //ƒ[ƒvˆ—
     public void Warp()
@@ -277,66 +297,3 @@ public class InMove : MonoBehaviour, IDamageable
         Debug.Log("warp");
     }
 }
-//using UnityEngine;
-
-//public class PlayerController : MonoBehaviour
-//{
-//    public float moveSpeed = 5f;
-//    public float rotationSpeed = 720f;
-//    public float jumpForce = 5f;
-
-//    private Animator animator;
-//    private Rigidbody rb;
-//    private bool isGrounded;
-
-//    void Awake()
-//    {
-//        animator = GetComponent<Animator>();
-//        rb = GetComponent<Rigidbody>();
-//    }
-
-//    void Update()
-//    {
-//        HandleMovement();
-//        HandleJump();
-//    }
-
-//    void HandleMovement()
-//    {
-//        float horizontal = Input.GetAxis("Horizontal");
-//        float vertical = Input.GetAxis("Vertical");
-
-//        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
-
-//        if (direction.magnitude >= 0.1f)
-//        {
-//            // Calculate target angle
-//            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
-//            // Smooth the rotation
-//            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref rotationSpeed, 0.1f);
-//            transform.rotation = Quaternion.Euler(0, angle, 0);
-
-//            // Move in the direction
-//            Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-//            rb.MovePosition(transform.position + moveDirection.normalized * moveSpeed * Time.deltaTime);
-
-//            // Update animator
-//            animator.SetFloat("Speed", direction.magnitude);
-//        }
-//        else
-//        {
-//            animator.SetFloat("Speed", 0);
-//        }
-//    }
-
-//    void HandleJump()
-//    {
-//        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
-
-//        if (isGrounded && Input.GetButtonDown("Jump"))
-//        {
-//            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-//            animator.SetTrigger("Jump");
-//        }
-//    }
-//}

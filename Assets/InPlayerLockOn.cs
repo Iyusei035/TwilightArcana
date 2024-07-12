@@ -9,7 +9,7 @@ public class PlayerLockon : MonoBehaviour
 {
     [SerializeField] PlayerCamera playerCamera;
     [SerializeField] Transform originTrn;
-    [SerializeField] float lockonRange = 20;
+    [SerializeField] float lockonRange = 100;
     [SerializeField] string targetLayerName;
     [SerializeField] GameObject lockonCursor;
 
@@ -72,6 +72,7 @@ public class PlayerLockon : MonoBehaviour
     // ロックオン入力を受け取る関数
     public void OnLockon(InputValue value)
     {
+        Debug.Log("target");
         lockonInput = value.isPressed;
     }
 
@@ -85,9 +86,12 @@ public class PlayerLockon : MonoBehaviour
     {
         // 1. SphereCastAllを使ってPlayer周辺のEnemyを取得しListに格納
         RaycastHit[] hits = Physics.SphereCastAll(originTrn.position, lockonRange, Vector3.up, 0, LayerMask.GetMask(targetLayerName));
+        //Gizmos.DrawWireSphere(originTrn.position, lockonRange, );
+        Debug.Log(hits?.Length);
         if (hits?.Length == 0)
         {
             // 範囲内にターゲットなし
+           
             return null;
         }
 
@@ -98,7 +102,7 @@ public class PlayerLockon : MonoBehaviour
         for (var i = 0; i < hits.Length; i++)
         {
             var direction = hits[i].collider.gameObject.transform.position - originTrn.position;
-            if (Physics.Raycast(originTrn.position, direction, out hit, lockonRange))
+            if (Physics.Raycast(originTrn.position+new Vector3(0,2,0), direction, out hit, lockonRange))
             {
                 if (hit.collider.gameObject == hits[i].collider.gameObject)
                 {
@@ -109,6 +113,7 @@ public class PlayerLockon : MonoBehaviour
         if (hitObjects?.Count == 0)
         {
             // 射線が通ったターゲットなし
+            Debug.Log("Hitnull");
             return null;
         }
 
@@ -156,5 +161,9 @@ public class PlayerLockon : MonoBehaviour
 
         return null;
     }
-
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position + transform.right * 5.0f, 1.0f);
+    }
 }
