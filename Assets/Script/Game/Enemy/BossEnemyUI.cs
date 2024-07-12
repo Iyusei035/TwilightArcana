@@ -11,10 +11,12 @@ public class BossEnemyUI : MonoBehaviour
     [SerializeField] private Image image;
 
     private BossController enemy = null;
+    private EnemyHP bossHp = null;
     void Update()
     {
         if (!GameObject.FindGameObjectWithTag("Enemy")) return;
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>();
+        bossHp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHP>();
         if (!enemy) return;
         textMeshPro.text = enemy.name;
 
@@ -32,8 +34,8 @@ public class BossEnemyUI : MonoBehaviour
 
     public int GetAdjustmentHp()
     {
-        maxHp = enemy.MaxHp();
-        nowHp = enemy.Hp;
+        maxHp = bossHp.MaxHp();
+        nowHp = bossHp.Hp;
         float adjustmentHp = maxHp * 0.01f; ;
         adjustmentHp = nowHp / adjustmentHp;
         return (int)adjustmentHp;
