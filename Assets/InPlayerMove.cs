@@ -32,7 +32,10 @@ public class InMove : MonoBehaviour, IDamageable
     float protect=1;
     AudioSource audioSource;
 
+
+    [Header("Invisible")]
     public bool Invincible = false;
+    public float invCount=10;
     public float Hp
     {
         get { return hp; }
@@ -71,7 +74,7 @@ public class InMove : MonoBehaviour, IDamageable
         {
             Death();
         }
-
+        BecomeInvincible(invCount);
         
         //Debug.Log( Hp);
     }

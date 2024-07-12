@@ -1,9 +1,11 @@
+using FlMr_Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class windPressure : MonoBehaviour
 {
+    [SerializeField] private ItemBase item;
     private Transform player;
     private void Start()
     {
@@ -11,9 +13,12 @@ public class windPressure : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-      if(other.gameObject.tag=="Enemy")
+        IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
+        if (other.gameObject.tag=="Enemy")
         {
-            float knockbackPower = 50;
+            Debug.Log(item.GetArcanaDamage());
+            damageable.Damage(item.GetArcanaDamage());
+            float knockbackPower = 2;
             Rigidbody rb = other.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
             Vector3 distination = (other.transform.position - player.position).normalized;

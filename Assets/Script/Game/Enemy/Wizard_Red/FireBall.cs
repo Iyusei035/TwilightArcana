@@ -36,9 +36,13 @@ public class FireBall : MonoBehaviour
     {
         IDamageable damageable = other.GetComponent<IDamageable>();
 
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             damageable.Damage((int)attackPower);
+            Destroy(attPrefab);
+        }
+        else if(other.gameObject.tag !="Enemy")
+        {
             Destroy(attPrefab);
         }
     }

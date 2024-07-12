@@ -932,6 +932,7 @@ GameObject:
   - component: {fileID: 8195445085774555103}
   - component: {fileID: 1353705589174486712}
   - component: {fileID: 3753434718505322367}
+  - component: {fileID: 2612109248306702980}
   - component: {fileID: 3787966922550910708}
   - component: {fileID: 3783465638571320099}
   - component: {fileID: 7360878962952134244}
@@ -950,7 +951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7258453127947607270}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.28635734, z: 0, w: 0.9581229}
+  m_LocalRotation: {x: 0, y: -0.28635725, z: 0, w: 0.95812297}
   m_LocalPosition: {x: 3.82, y: -12.050644, z: -58.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -963,7 +964,7 @@ Transform:
   - {fileID: 6956444375795956514}
   - {fileID: 6341100064284684576}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -33.28, z: 0}
 --- !u!95 &8195445085774555103
 Animator:
   serializedVersion: 5
@@ -1000,7 +1001,6 @@ MonoBehaviour:
   animator: {fileID: 8195445085774555103}
   navmeshAgent: {fileID: 3787966922550910708}
   target: {fileID: 0}
-  maxHp: 50
   capsuleCollider: {fileID: 7360878962952134244}
   combatDistance: 20
   attackCollider: {fileID: 2940845269380528035}
@@ -1010,6 +1010,8 @@ MonoBehaviour:
   attackDistance: 3
   tpDistance: 40
   waistBone: {fileID: 549415504990139164}
+  Invincible: 0
+  invCount: 1
 --- !u!114 &3753434718505322367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,6 +1026,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 100
   hp: 0
+--- !u!114 &2612109248306702980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258453127947607270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27035b4118ecc349a9bb1a8465acfd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 1
 --- !u!195 &3787966922550910708
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1032,7 +1047,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7258453127947607270}
   m_Enabled: 1
-  m_AgentTypeID: -334000983
+  m_AgentTypeID: 1479372276
   m_Radius: 1.5
   m_Speed: 3.5
   m_Acceleration: 15
@@ -1071,7 +1086,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &7360878962952134244
 CapsuleCollider:
@@ -1368,7 +1383,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c63664314ff20a4abe38e9a17d18328, type: 2}
+  - {fileID: 2100000, guid: c19ce37bb54b73e45890d692ff1cd854, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

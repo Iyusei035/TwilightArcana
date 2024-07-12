@@ -7,15 +7,18 @@ public class Player_8_Strength : MonoBehaviour
      [SerializeField] Transform player;
     [SerializeField] int IsDamage = 1;
     [SerializeField] GameObject effect;
+    float IsTime = 0.23f;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //particle=GetComponent<ParticleSystem>();
+        StartCoroutine(InstantiateObject(IsTime));
+        StartCoroutine(UpdateSecond(IsTime));
     }
     private void Update()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.down * 100);
+        //Rigidbody rb = GetComponent<Rigidbody>();
+        //rb.AddForce(Vector3.down * 100);
 
         //float pw = 1;
         //pw--;
@@ -23,10 +26,22 @@ public class Player_8_Strength : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    IEnumerator InstantiateObject(float delay)
     {
-        UnityEngine.Vector3 _pos = collision.transform.position;
-        UnityEngine.Quaternion _rot = collision.transform.rotation;
-        Instantiate(effect, _pos, _rot);
+        yield return new WaitForSeconds(delay);
+
+        Instantiate(effect, transform.position, transform.rotation);
+    }
+
+    IEnumerator UpdateSecond(float second)
+    {
+        float endTime = Time.time +second;
+        while (Time.time < endTime)
+        {
+            Transform tr = GetComponent<Transform>();
+            tr.position += new Vector3(0, -0.23f, 0);
+            transform.position = tr.position;
+            yield return null; 
+        }
     }
 }

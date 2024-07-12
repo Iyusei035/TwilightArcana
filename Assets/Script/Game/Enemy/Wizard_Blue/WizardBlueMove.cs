@@ -7,7 +7,7 @@ using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
 
-public class WizardBlueMove : MonoBehaviour, IDamageable
+public class WizardBlueMove : MonoBehaviour,IDamageable
 {
     [SerializeField]
     private Animator animator = null;
@@ -15,8 +15,7 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
     private NavMeshAgent navmeshAgent = null;
     [SerializeField]
     private Transform target = null;
-    [SerializeField, Min(0)]
-    private int maxHp = 100;
+
     [SerializeField]
     private CapsuleCollider capsuleCollider = null;
 
@@ -55,7 +54,7 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
     private Transform defaultTarget;
     private bool isAttacking = false;
     private bool isDead = false;
-    public float hp = 0;
+
 
     public float coolTime = 0;
 
@@ -64,18 +63,12 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
 
     private float deadWaitTime = 7;
 
+    GameObject[] players;
+    GameObject nearestPlayer = null;
+    float minDis = 1000f;
 
-    public float Hp
-    {
-        set
-        {
-            hp = Mathf.Clamp(value, 0, maxHp);
-        }
-        get
-        {
-            return hp;
-        }
-    }
+    private EnemyHP thisHp;
+
 
 
     void Start()
@@ -88,10 +81,9 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
 
         attackWait = new WaitForSeconds(attackTime);
         attackIntervalWait = new WaitForSeconds(attackInterval);
+        attackCollider.enabled = false;
 
-
-        InitEnemy();
-
+        thisHp = GetComponent<EnemyHP>();
     }
 
     void Update()
@@ -111,32 +103,24 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
         if(navmeshAgent.remainingDistance < 0.8f)
         { coolTime += Time.deltaTime; }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Death();
-        }
-
         CheckDistance();
         Move();
     }
 
-    void InitEnemy()
-    {
-        Hp = maxHp;
-    }
 
     public void Damage(float value)
     {
         if (isDead) { return; }
         if (value <= 0) { return; }
-        Hp -= value;
-        Debug.Log(Hp);
-        if (Hp <= 0) 
+        thisHp.SetHp(value);
+        Debug.Log(thisHp.GetHp());
+        if (thisHp.GetHp() <= 0)
         {
             StopAttack();
             Death();
         }
     }
+
 
     public void Death()
     {
@@ -172,7 +156,7 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
         //à⁄ìÆéûÉAÉjÉÅÅ[ÉVÉáÉìÇÃÉZÉbÉg
         if (target == null) { return; }
         animator.SetTrigger(RunHash);
-        thisTransform.DOLookAt(player.transform.position,0.5f);
+        thisTransform.DOLookAt(nearestPlayer.transform.position,0.5f);
         navmeshAgent.speed = 7;
         
 
@@ -182,37 +166,58 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
     {
         if (player.gameObject == null) { return; }
 
-        float diff = (player.transform.position - thisTransform.position).sqrMagnitude;
-
-        if (diff < combatDistance * combatDistance)
+        players = GameObject.FindGameObjectsWithTag("Player");
+        minDis = 1000;
+        foreach (GameObject near in players)
         {
-            animator.SetBool(CombatIdle_Hash,true);
-            animator.SetBool(NormalIdle_Hash, false);
-            //í èÌçUåÇ
-            if (diff < attackDistance * attackDistance)
+            float dis = Vector3.Distance(thisTransform.position, near.transform.position);
+            if (dis <= combatDistance && dis < minDis)
             {
-                thisTransform.LookAt(player.transform.position);
-                if (!isAttacking)
-                {
-                    StartCoroutine(nameof(Attack));
-                }
+                minDis = dis;
+                nearestPlayer = near;
             }
-            //í«ê’
-            else
+            else if (dis >= combatDistance && dis > minDis)
             {
-                if (isAttacking) { return; }
-                target = player.transform;
-                UpdateAnimator();
+                minDis = 1000;
+                nearestPlayer = null;
+            }
+        }
+
+        
+
+        if (nearestPlayer != null)
+        {
+            float diff = (nearestPlayer.transform.position - thisTransform.position).sqrMagnitude;
+            if (diff < combatDistance * combatDistance)
+            {
+                animator.SetBool(CombatIdle_Hash, true);
+                animator.SetBool(NormalIdle_Hash, false);
+                //í èÌçUåÇ
+                if (diff < attackDistance * attackDistance)
+                {
+                    thisTransform.LookAt(nearestPlayer.transform.position);
+                    if (!isAttacking)
+                    {
+                        StartCoroutine(nameof(Attack));
+                    }
+                }
+                //í«ê’
+                else
+                {
+                    if (isAttacking) { return; }
+                    target = nearestPlayer.transform;
+                    UpdateAnimator();
+                }
             }
         }
         //úpúj
         else
         {
-            if(isAttacking) { return; }
+            if (isAttacking) { return; }
             target = defaultTarget;
             navmeshAgent.speed = 2.5f;
             animator.SetBool(NormalIdle_Hash, true);
-            animator.SetBool(CombatIdle_Hash, false) ;
+            animator.SetBool(CombatIdle_Hash, false);
             animator.SetFloat(MoveHash, navmeshAgent.desiredVelocity.magnitude);
 
 
@@ -223,8 +228,6 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
                     nextGoal();
                 }
             }
-
-
         }
     }
 
@@ -235,12 +238,11 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
         navmeshAgent.velocity = Vector3.zero;
         yield return attackWait;
         animator.SetBool(AttackHash,true);
-        thisTransform.DOLookAt(target.position, 0.5f);
+        thisTransform.DOLookAt(nearestPlayer.transform.position, 0.5f);
         yield return new WaitForSeconds(0.4f);
         animator.speed = 0.5f;
         yield return new WaitForSeconds(0.2f);
         attackCollider.enabled = true;
-        thisTransform.DOLookAt(target.position, 0.1f);
         animator.speed = 2;
         yield return attackIntervalWait;
         attackCollider.enabled = false;
@@ -295,7 +297,7 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
     {
         IDamageable damageable = other.GetComponent<IDamageable>();
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player"||other.gameObject.tag=="Support")
         {
             //í èÌçUåÇ
             damageable.Damage((int)attackPower);
@@ -303,6 +305,7 @@ public class WizardBlueMove : MonoBehaviour, IDamageable
         }
 
     }
+
 
     public void Protect() { }
 
