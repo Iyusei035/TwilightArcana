@@ -201,6 +201,7 @@ public class InMove : MonoBehaviour, IDamageable
             coll.enabled = true;
         }
         DebugKey();
+        
     }
     void FootR() 
     {
@@ -224,6 +225,7 @@ public class InMove : MonoBehaviour, IDamageable
         UnityEngine.Vector3 _pos = GameObject.FindGameObjectWithTag("Player").transform.position;
         UnityEngine.Quaternion PlayerRot = GameObject.FindGameObjectWithTag("Player").transform.rotation;
         Instantiate(Effect, _pos, PlayerRot);
+        Effect.transform.position = _pos;
     }
 
     void Healing()

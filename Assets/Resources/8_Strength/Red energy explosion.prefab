@@ -24493,6 +24493,7 @@ GameObject:
   - component: {fileID: 5726018809045565519}
   - component: {fileID: 6415707391935192240}
   - component: {fileID: 6926281799934985513}
+  - component: {fileID: 3381761690342575453}
   m_Layer: 0
   m_Name: Red energy explosion
   m_TagString: Untagged
@@ -29413,6 +29414,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3381761690342575453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378648546881499446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7a47ba0955a5e419c48aade016393d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9098514075732951805
 GameObject:
   m_ObjectHideFlags: 0
