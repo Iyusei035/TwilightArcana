@@ -126,5 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 8378648546881499446, guid: 05d44461d41bb114ab35079095318adf, type: 3}
-  dropSpeed: -100
-  moveTime: 0.06
+  IsTime: 0.08
