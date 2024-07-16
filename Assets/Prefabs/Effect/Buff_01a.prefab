@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3769969031047562847}
   - component: {fileID: 1426245440731515418}
   - component: {fileID: 4705501379079182426}
+  - component: {fileID: -4167103428799539196}
   m_Layer: 0
   m_Name: Buff_01a
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3874635022589376825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 143.10803, y: 0.03750038, z: 86.02802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4831,6 +4832,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-4167103428799539196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3874635022589376825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2155bd7b75ee6cc4e88ee0b972a71b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7556270111816052728
 GameObject:
   m_ObjectHideFlags: 0

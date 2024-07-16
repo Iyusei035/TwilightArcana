@@ -18,7 +18,7 @@ MonoBehaviour:
   description: "Strength\u306F\u529B\u3092\u751F\u6210\u3059\u308B"
   arcanaBase: {fileID: -6329989961403644009, guid: 9a4c72067aebf5a46bcba6afd663f2bb,
     type: 3}
-  maxCoolTime: 1
+  maxCoolTime: 3
   basicDamage: 10
   buffValue: 1.5
   badBuffValue: 0.5
