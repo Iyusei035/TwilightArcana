@@ -20,8 +20,10 @@ MonoBehaviour:
     type: 3}
   maxCoolTime: 1
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
-  arcanaType: 0
+  arcanaType: 2
   damageType: 1
+  attackRange: 0

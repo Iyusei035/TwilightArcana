@@ -13,7 +13,6 @@ public class SlotArcanaEffect : MonoBehaviour
     {
         for (int count = 0; gameObjects.Count > count; ++count)
         {
-            Debug.Log(count);
             if (gameObjects[count] == null) return;
             if (gameObjects[count].GetComponent<GameSceneInventory>() == null) return;
             initFlg = true;
@@ -30,6 +29,8 @@ public class SlotArcanaEffect : MonoBehaviour
             gameObjects[2].GetComponent<GameSceneInventory>().GetItem().GetCoolTime();
         if (gameObjects[3].GetComponent<GameSceneInventory>().GetItem())
             gameObjects[3].GetComponent<GameSceneInventory>().GetItem().GetCoolTime();
+        if (gameObjects[4].GetComponent<GameSceneInventory>().GetItem())
+            gameObjects[4].GetComponent<GameSceneInventory>().GetItem().GetCoolTime();
         if (Input.GetKeyDown(KeyCode.Mouse0) && !pushFlg)
         {
             pushFlg = true;
@@ -62,7 +63,23 @@ public class SlotArcanaEffect : MonoBehaviour
             if (gameObjects[3].GetComponent<GameSceneInventory>().GetItem().GetArcana() == null) return;
             gameObjects[3].GetComponent<GameSceneInventory>().GetItem().GetArcana().ArcanaEffect();
         }
-        else if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1) && pushFlg)
+        else if (Input.GetKeyDown(KeyCode.C) && !pushFlg)
+        {
+            pushFlg = true;
+            if (gameObjects[4].GetComponent<GameSceneInventory>().GetItem() == null) return;
+            if (!gameObjects[4].GetComponent<GameSceneInventory>().GetItem().GetActiveFlg()) return;
+            if (gameObjects[4].GetComponent<GameSceneInventory>().GetItem().GetArcana() == null) return;
+            gameObjects[4].GetComponent<GameSceneInventory>().GetItem().GetArcana().ArcanaEffect();
+        }
+        else if
+            (
+            Input.GetKeyUp(KeyCode.Q) ||
+            Input.GetKeyUp(KeyCode.E) ||
+            Input.GetKeyDown(KeyCode.Mouse0) ||
+            Input.GetKeyDown(KeyCode.Mouse1) ||
+            Input.GetKeyDown(KeyCode.C) &&
+            pushFlg
+            )
         {
             pushFlg = false;
         }
