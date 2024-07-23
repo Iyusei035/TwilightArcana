@@ -34,7 +34,7 @@ public class Scarecrow : MonoBehaviour,IDamageable
     public void Damage(float value)
     {
         Scarecrow_hp-=value;
-        Debug.Log(Scarecrow_hp);
+        Debug.Log(value);
     }
     public void Protect()
     {

@@ -71,6 +71,7 @@ public class SceneChangeButton : MonoBehaviour
     }
     private void Update()
     {
+
         if (GameObject.Find("SceneFade"))
         {
             fadeManager =

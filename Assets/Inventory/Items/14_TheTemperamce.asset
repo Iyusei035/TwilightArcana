@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 14_TheTemperamce
   m_EditorClassIdentifier: 
-  uniqueId: 12
+  uniqueId: 15
   itemName: 14_TheTemperamce
-  icon: {fileID: 21300000, guid: 2969d90b86698124696637a6df64a112, type: 3}
-  description: "\u9060\u8DDD\u96E2\u3092\u5F37\u304B"
-  arcanaBase: {fileID: 8393319056060134629, guid: 769f4df7a7388b348be558e365897c14,
+  icon: {fileID: 21300000, guid: 4b67977300cce1140b62f6fcc101fb51, type: 3}
+  description: "\u9060\u8DDD\u96E2\u3092\u5F37\u5316"
+  arcanaBase: {fileID: -2690464299899890445, guid: bb55c99f15a45414c9e24f567597bb58,
     type: 3}
   maxCoolTime: 25
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 1
+  badBuffFlg: 0
   arcanaType: 1
   damageType: 1
+  attackRange: 0

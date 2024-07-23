@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arcana_14_TheTemperamce : ArcanaBase
+public class Arcana_14_TheTemperance : ArcanaBase
 {
     public Transform playerTrn;
     public Vector3 position;
@@ -21,6 +21,6 @@ public class Arcana_14_TheTemperamce : ArcanaBase
 
         GameObject go = Resources.Load<GameObject>("14_TheTemperamce/Orbiting Wind");
         GameObject HommingBuff = Instantiate(go, position, Quaternion.identity);
-        Destroy(HommingBuff, 20.0f);
+        //Destroy(HommingBuff, 20.0f);
     }
 }

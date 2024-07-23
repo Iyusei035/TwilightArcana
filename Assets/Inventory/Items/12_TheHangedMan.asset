@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 12_TheHangedMan
   m_EditorClassIdentifier: 
-  uniqueId: 12
+  uniqueId: 13
   itemName: 12_TheHangedMan
-  icon: {fileID: 21300000, guid: 2969d90b86698124696637a6df64a112, type: 3}
+  icon: {fileID: 21300000, guid: 882241fc9a98ff042953e64df54e573d, type: 3}
   description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
   arcanaBase: {fileID: 8393319056060134629, guid: 769f4df7a7388b348be558e365897c14,
     type: 3}
   maxCoolTime: 25
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
   arcanaType: 1
   damageType: 1
+  attackRange: 0

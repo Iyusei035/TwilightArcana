@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3395367163011984616}
   - component: {fileID: 4799444090386474327}
   - component: {fileID: 7149481781369787267}
-  - component: {fileID: 5519831821468772351}
+  - component: {fileID: -8166121524099576518}
   m_Layer: 0
   m_Name: Orbiting Wind
   m_TagString: Untagged
@@ -4833,7 +4833,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5519831821468772351
+--- !u!114 &-8166121524099576518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4842,6 +4842,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8473033584874093242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3df38e3fe742864a9f55346ea473cef, type: 3}
+  m_Script: {fileID: 11500000, guid: ff9620000e027bf46b707be5d0a5bfa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuffTime: 20

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
+  m_Name: 4_The Emperor
+  m_EditorClassIdentifier: 
+  uniqueId: 5
+  itemName: 4_The Emperor
+  icon: {fileID: 21300000, guid: bde06d603fe493e4d872362452441659, type: 3}
+  description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
+  arcanaBase: {fileID: 8393319056060134629, guid: 769f4df7a7388b348be558e365897c14,
+    type: 3}
+  maxCoolTime: 25
+  basicDamage: 10
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
+  badBuffValue: 0.5
+  damageValue_randMax: 10
+  arcanaType: 0
+  damageType: 1
+  attackRange: 0

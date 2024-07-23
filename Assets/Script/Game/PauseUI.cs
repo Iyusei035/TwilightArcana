@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour
@@ -8,12 +9,23 @@ public class PauseUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI PauseText;
     [SerializeField] private GameObject PauseRestartButton;
     [SerializeField] private GameObject PauseRestartText;
+
+    [Header("SceneUI")]
+    [SerializeField] private GameObject Restart;
+    [SerializeField] private GameObject Select;
+    [SerializeField] private GameObject Title;
+
     private void Start()
     {
         PauseImage.gameObject.GetComponent<Image>().enabled = false;
         PauseText.gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
         PauseRestartButton.gameObject.GetComponent<Image>().enabled = false;
         PauseRestartText.gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
+
+        Restart.SetActive(false);
+        Select.SetActive(false);
+        Title.SetActive(false);
+        //ReStart.gameObject.GetComponent<>().enabled=false;
     }
     void Update()
     {
@@ -28,6 +40,9 @@ public class PauseUI : MonoBehaviour
                 PauseText.gameObject.GetComponent<TextMeshProUGUI>().enabled = true;
                 PauseRestartButton.gameObject.GetComponent<Image>().enabled = true;
                 PauseRestartText.gameObject.GetComponent<TextMeshProUGUI>().enabled = true;
+                Restart.SetActive(true);
+                Select.SetActive(true);
+                Title.SetActive(true);
                 //PauseSelectButton.gameObject.GetComponent<Image>().enabled = true;
                 ///PauseSelectText.gameObject.GetComponent<TextMeshProUGUI>().enabled = true;
             }
@@ -40,6 +55,9 @@ public class PauseUI : MonoBehaviour
                 PauseText.gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
                 PauseRestartButton.gameObject.GetComponent<Image>().enabled = false;
                 PauseRestartText.gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
+                Restart.SetActive(false);
+                Select.SetActive(false);
+                Title.SetActive(false);
                 //PauseSelectButton.gameObject.GetComponent<Image>().enabled = false;
                 //PauseSelectText.gameObject.GetComponent<TextMeshProUGUI>().enabled = false;
             }

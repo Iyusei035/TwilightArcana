@@ -12,12 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 10_WheelOfFortune
   m_EditorClassIdentifier: 
-  uniqueId: 4
-  itemName: "\u904B\u547D\u306E\u8F2A"
-  icon: {fileID: 21300000, guid: 9c33130756f303c4881364392c0cb48e, type: 3}
+  uniqueId: 11
+  itemName: 10_Wheel of Fortune
+  icon: {fileID: 21300000, guid: 02f873be2fde0f54088ec0c99e845827, type: 3}
   description: "\u904B\u547D\u306E\u8F2A\u306F\u3001\u5916\u6575\u3092\u5F3E\u304D\u98DB\u3070\u3057\u307E\u3059"
   arcanaBase: {fileID: -1681866319337843452, guid: 7bf7fd77f1d036740b92fd924653cc6a,
     type: 3}
   maxCoolTime: 5
-  BasicDamage: 1
+  basicDamage: 10
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
+  badBuffValue: 0.5
+  damageValue_randMax: 10
   arcanaType: 1
+  damageType: 0
+  attackRange: 0

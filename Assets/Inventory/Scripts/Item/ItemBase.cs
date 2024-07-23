@@ -17,9 +17,9 @@ namespace FlMr_Inventory
         [SerializeField] private float damageValue_randMax = 10;
         private float coolTime = 0;
         private bool activeFlg = true;
-        private bool proximityBuffFlg = false;
-        private bool longDistanceBuffFlg = false;
-        private bool badBuffFlg = false;
+        public  bool proximityBuffFlg = false;
+        public bool longDistanceBuffFlg = false;
+        public bool badBuffFlg = false;
         public enum ArcanaType
         {
             Attack,
@@ -91,15 +91,24 @@ namespace FlMr_Inventory
         }
         public float GetArcanaDamage()
         {
+            //å≈íËÉ_ÉÅÅ[ÉW
             if (damageType == DamageType.Constant) return basicDamage;
             else
             {
-                if (!badBuffFlg) basicDamage *= badBuffValue;
-                if (attackRange == AttackRange.Proximity &&
-                    proximityBuffFlg) return basicDamage *= proximityBuffValue;
-                else if (attackRange == AttackRange.longDistance &&
-                    longDistanceBuffFlg) return basicDamage *= longDistanceBuffValue;
-                return basicDamage;
+                float damage = basicDamage;
+                if (badBuffFlg)
+                    damage = basicDamage * badBuffValue;
+                else
+                {
+                    if (attackRange == AttackRange.Proximity &&
+                        proximityBuffFlg)
+                        damage = basicDamage * proximityBuffValue;
+                    else if (attackRange == AttackRange.longDistance &&
+                        longDistanceBuffFlg)
+                        damage = basicDamage * longDistanceBuffValue;
+                }
+                Debug.Log(damage);
+                return damage;
             }
         }
         public int SetId(int id)

@@ -1,3 +1,4 @@
+using FlMr_Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class Player_Slash : MonoBehaviour
     Quaternion SlashRot;
     // [SerializeField] Transform player;
     [SerializeField] int IsDamage = 1;
+
+    [SerializeField] private ItemBase item;
     private void Start()
     {
         particle=GetComponent<ParticleSystem>();
@@ -28,10 +31,13 @@ public class Player_Slash : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+        float damage = item.GetArcanaDamage();
+        Debug.Log(damage);
+        Debug.Log(item.GetBadBuffFlg());
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("!Enemy!Hit");
-            damageable.Damage((int)IsDamage);
+            damageable.Damage(damage);
             //Destroy(gameObject);
         }
     }

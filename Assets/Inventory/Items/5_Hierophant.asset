@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 5_Hierophant
   m_EditorClassIdentifier: 
-  uniqueId: 11
+  uniqueId: 6
   itemName: Hierophant
-  icon: {fileID: 21300000, guid: 202bbdb572e94c5499ca4438d100da2d, type: 3}
+  icon: {fileID: 21300000, guid: 0a742a0089d400b4f9114a187291a334, type: 3}
   description: Hierophant
   arcanaBase: {fileID: 8436947356625115147, guid: 43078a5da4b5ca74da9d98d8de6ce3af,
     type: 3}

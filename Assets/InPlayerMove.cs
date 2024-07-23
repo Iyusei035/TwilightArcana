@@ -5,16 +5,18 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SubsystemsImplementation;
 using UnityEngine.UIElements;
 using UnityEngine.VFX;
-
+using UnityEngine.UI;
+using TMPro;
 public class InMove : MonoBehaviour, IDamageable
 {
     [SerializeField] private Charadata data;
     float hp = 0;
     float sp = 0;
-    public float ReSp=0.15f;
-    float DashSp=0.25f;
+    public float ReSp = 0.15f;
+    float DashSp = 0.25f;
     private float spMax = 100;
     static int hashAttackType = Animator.StringToHash("AttackType");
     public float PlayerMovePower = 0;
@@ -26,16 +28,26 @@ public class InMove : MonoBehaviour, IDamageable
     [SerializeField] GameObject HealingEffect;
     [SerializeField] GameObject Effect;
     public AudioClip HealAudio;
-    [SerializeField] int HealingCount=5;
-    [SerializeField] int HealPower = 45;
+   
     public AudioClip FootSound;
-    float protect=1;
+    float protect = 1;
     AudioSource audioSource;
 
 
     [Header("Invisible")]
     public bool Invincible = false;
-    public float invCount=10;
+    public float invCount = 10;
+
+    [Header("Devil")]
+    public float decreaseAmount = 20f; // 5秒間で減らすHPの量
+    private float elapsedTime = 0f; // 経過時間
+
+    [Header("Heal")]
+    [SerializeField] int HealingCount = 5;
+    [SerializeField] int HealPower = 45;
+    public int SpriteNumber; //入れるための番号を設置
+    public GameObject TextDisplay; //表示するためのテキストを指定
+
     public float Hp
     {
         get { return hp; }
@@ -73,6 +85,7 @@ public class InMove : MonoBehaviour, IDamageable
         if (Hp <= 0)
         {
             Death();
+            Die();
         }
         BecomeInvincible(invCount);
         
@@ -154,11 +167,14 @@ public class InMove : MonoBehaviour, IDamageable
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (sp <= 0) return;
-                animator.SetTrigger("Rolling");
-                coll.enabled = false;
-                inv = 1.5f;
-                sp -= (float)30;
+                if (sp >= 30)
+                {
+                    animator.SetTrigger("Rolling");
+                    coll.enabled = false;
+                    inv = 1.5f;
+                    sp -= (float)30;
+                }
+               
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -201,6 +217,8 @@ public class InMove : MonoBehaviour, IDamageable
             coll.enabled = true;
         }
         DebugKey();
+        Devil();
+        HealCount();
         
     }
     void FootR() 
@@ -301,4 +319,53 @@ public class InMove : MonoBehaviour, IDamageable
 
         Debug.Log("warp");
     }
+
+    public void Die()
+    {
+       
+        if (GameObject.Find("wing(Clone)"))
+        {
+            BecomeInvincible(10.0f);
+            Hp = 50;
+            GameObject.Find("wing(Clone)").GetComponent<Player_20_Judgment>();
+            GameObject.Find("wing(Clone)").GetComponent<Player_20_Judgment>().DeleteFlg();
+        }
+        else
+        {
+            animator.SetTrigger("Death");
+        }
+        
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void Devil()
+    {
+        
+        if (GameObject.Find("devil(Clone)"))
+        {
+            if (elapsedTime < 7.0f)
+            {
+                float decreasePerSecond = decreaseAmount / 5f; // 秒間で減らすHPの量
+                Hp -= decreasePerSecond * Time.deltaTime; // HPを減らす
+                elapsedTime += Time.deltaTime; // 経過時間を更新
+            }
+        }
+        else
+        {
+            elapsedTime = 0;
+            return;
+        }
+    }
+
+    public void HealCount()
+    {
+        string SpriteText = HealingCount.ToString();
+        TextDisplay.GetComponent<TextMeshProUGUI>().text ="<sprite="+SpriteText+">"; //"<sprite=HealCount>";
+    }
 }
+
