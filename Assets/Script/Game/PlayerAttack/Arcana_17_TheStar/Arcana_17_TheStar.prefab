@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 824718429262538514}
   - component: {fileID: 1556603822640924313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arcana_17_TheStar
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

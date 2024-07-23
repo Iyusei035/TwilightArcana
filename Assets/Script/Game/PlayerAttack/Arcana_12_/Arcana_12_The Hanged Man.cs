@@ -21,6 +21,6 @@ public class Arcana_12_TheHangedMan : ArcanaBase
 
         GameObject go = Resources.Load<GameObject>("12_The Hanged Man/Orbiting Wind");
         GameObject HommingBuff = Instantiate(go, position, Quaternion.identity);
-        Destroy(HommingBuff, 20.0f);
+        //Destroy(HommingBuff, 20.0f);
     }
 }

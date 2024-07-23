@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
+  m_Name: 3_The Empress
+  m_EditorClassIdentifier: 
+  uniqueId: 4
+  itemName: 3_The Empress
+  icon: {fileID: 21300000, guid: 69e7211d9c74b8842acc28ef0b623b38, type: 3}
+  description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
+  arcanaBase: {fileID: -1254612963553387197, guid: 25270b494bb05e845ad0443f9ac1cc6b,
+    type: 3}
+  maxCoolTime: 1
+  basicDamage: 10
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
+  badBuffValue: 0.5
+  damageValue_randMax: 10
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 0
+  badBuffFlg: 0
+  arcanaType: 1
+  damageType: 1
+  attackRange: 0

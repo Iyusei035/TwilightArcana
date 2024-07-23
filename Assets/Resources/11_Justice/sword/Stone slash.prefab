@@ -130,6 +130,7 @@ MonoBehaviour:
   a: {fileID: 1518232233151987118}
   particle: {fileID: 4577776539254710993}
   IsDamage: 5
+  item: {fileID: 11400000, guid: fee9556350dc8cb4a89fe794af519ce3, type: 2}
 --- !u!198 &4577776539254710993
 ParticleSystem:
   m_ObjectHideFlags: 0

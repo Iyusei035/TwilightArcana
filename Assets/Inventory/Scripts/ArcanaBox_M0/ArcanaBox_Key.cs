@@ -171,6 +171,7 @@ public class ArcanaBox_Key : MonoBehaviour
 
     public ItemBase GetItem()
     {
-        return AllSlots[0].Item;
+        if (AllSlots[0].Item != null) return AllSlots[0].Item;
+        else return null;
     }
 }

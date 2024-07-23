@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
+  m_Name: 2_TheHighPriestess
+  m_EditorClassIdentifier: 
+  uniqueId: 9
+  itemName: TheHighPriestess
+  icon: {fileID: 21300000, guid: e9980ad31e8dba04aa8110ba611c69d8, type: 3}
+  description: 
+  arcanaBase: {fileID: 3730653479477510808, guid: 87542e8031cff5649bae0bf5ca377baa,
+    type: 3}
+  maxCoolTime: 3
+  basicDamage: 10
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
+  badBuffValue: 0.5
+  damageValue_randMax: 10
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 0
+  badBuffFlg: 0
+  arcanaType: 0
+  damageType: 0
+  attackRange: 1

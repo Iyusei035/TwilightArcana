@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player_17_TheStar : MonoBehaviour
 {
-    private BossController enemy = null;
+    //private IDamageable enemy = null;
+    private GameObject player;
+    public float effectDistance;
     private new ParticleSystem particleSystem;
     private void Start()
     {
@@ -13,10 +15,11 @@ public class Player_17_TheStar : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>();
-        gameObject.transform.position = enemy.transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        gameObject.transform.position = player.transform.position + (player.transform.forward * effectDistance);
+        gameObject.transform.forward = player.transform.forward;
         particleSystem = gameObject.GetComponent<ParticleSystem>();
-        for(int count=0;count< ItemUtility.Instance.AllItems.Count;++count)
+        for (int count = 0; count < ItemUtility.Instance.AllItems.Count; ++count)
         {
             ItemUtility.Instance.AllItems.ElementAt(count).SetBadBuffFlg(true);
         }

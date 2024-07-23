@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueId: 1
   itemName: 0_TheFool
-  icon: {fileID: 21300000, guid: 71e4e41b1142b3144b1c53eefc114400, type: 3}
+  icon: {fileID: 21300000, guid: 10908f8f516e0c14c94f763d15140150, type: 3}
   description: "\u30D6\u30EA\u30F3\u30AF\u3092\u884C\u3044\u843D\u3057\u7269\u3092\u843D\u3068\u3059"
   arcanaBase: {fileID: -1246021411365712402, guid: 04f2c471f3d2f31468eb28f59d370105,
     type: 3}
   maxCoolTime: 5
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
-  arcanaType: 0
-  damageType: 0
+  arcanaType: 1
+  damageType: 1
+  attackRange: 0

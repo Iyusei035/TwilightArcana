@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 18_TheMoon
   m_EditorClassIdentifier: 
-  uniqueId: 10
+  uniqueId: 19
   itemName: TheMoon
-  icon: {fileID: 21300000, guid: fc4fd4ffc0e3d1d44aa1015b26097b3b, type: 3}
+  icon: {fileID: 21300000, guid: e262a5c8865587f4dab1855d8e05be4e, type: 3}
   description: "\u4E00\u7DD2\u306B\u6226\u3063\u3066\u304F\u308C\u308B\u30AA\u30AA\u30AB\u30DF\u3092\u53EC\u559A\u3059\u308B"
   arcanaBase: {fileID: 8055749473400673144, guid: 72df85afee9be5a45a22a67cf52f98a2,
     type: 3}
   maxCoolTime: 10
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
   arcanaType: 1
   damageType: 0
+  attackRange: 0

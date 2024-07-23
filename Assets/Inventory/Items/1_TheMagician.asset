@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971eee4c8bfeb29488aff6d9a8642b61, type: 3}
   m_Name: 1_TheMagician
   m_EditorClassIdentifier: 
-  uniqueId: 7
+  uniqueId: 2
   itemName: 1_TheMagician
-  icon: {fileID: 21300000, guid: 8d036653ad81440478aed1ed4e0153e9, type: 3}
+  icon: {fileID: 21300000, guid: fb632d6f156d6be418687f8ffb24c7ef, type: 3}
   description: "\u706B\u708E\u9B54\u6CD5"
   arcanaBase: {fileID: -6593515624203264310, guid: 8d38facfa67feaa47b9b9214823e28a6,
     type: 3}
   maxCoolTime: 1
   basicDamage: 10
-  buffValue: 1.5
+  proximityBuffValue: 1.5
+  longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
   arcanaType: 0
   damageType: 0
+  attackRange: 1

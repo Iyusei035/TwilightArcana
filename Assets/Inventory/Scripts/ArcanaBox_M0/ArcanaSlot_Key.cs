@@ -86,23 +86,6 @@ public class ArcanaSlot_Key : MonoBehaviour, IDropHandler
         OnClickCallback = onClickCallback;
     }
     /// スロットがクリックされたときに呼ばれるメソッド
-    //public void OnClicked()
-    //{
-    //    //このスロットにアイテムが存在している場合
-    //    if (Item != null)
-    //    {
-    //        // コールバックメソッドを実行
-    //        OnClickCallback(Item, Number, this.gameObject);
-    //        if (SceneManager.GetActiveScene().name == "BildScene")
-    //        {
-    //            Debug.Log("選択中のアイテムは" + Item.name + "です");
-    //        }
-    //    }
-    //    else if (SceneManager.GetActiveScene().name == "BildScene")
-    //    {
-    //        Debug.Log("選択中のアイテムは無です");
-    //    }
-    //}
     public void OnClicked()
     {
         //このスロットにアイテムが存在している場合
@@ -114,12 +97,74 @@ public class ArcanaSlot_Key : MonoBehaviour, IDropHandler
         }
     }
 
+
     public void OnDrop(PointerEventData pointerEventData)
     {
+        if (!GameObject.FindGameObjectWithTag("ItemBox")) return;
+        if (pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item == null) return;
         var box = GameObject.FindGameObjectWithTag("ItemBox").GetComponent<ItemBox>();
         if (!box.ArcanaSlotaCheck(pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.UniqueId)) return;
         var m0Slot = GameObject.FindGameObjectWithTag(_tagName).GetComponent<ArcanaBox_Key>();
-        if (Item) m0Slot.RemoveItem(Item.UniqueId, 1);
-        m0Slot.AddItem(pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.UniqueId, 1);
+        Debug.Log(pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.arcanaType);
+        if (pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.arcanaType == ItemBase.ArcanaType.Ex && _tagName == "ArcanaBox_Ult")
+        {
+            if (Item) m0Slot.RemoveItem(Item.UniqueId, 1);
+            m0Slot.AddItem(pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.UniqueId, 1);
+        }
+        else if
+        (
+            (
+                (pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.arcanaType == ItemBase.ArcanaType.Attack) ||
+                (pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.arcanaType == ItemBase.ArcanaType.Support)
+            )
+            &&
+             _tagName != "ArcanaBox_Ult"
+        )
+        {
+            if (Item) m0Slot.RemoveItem(Item.UniqueId, 1);
+            m0Slot.AddItem(pointerEventData.pointerPress.GetComponent<ItemBoxSlot>().Item.UniqueId, 1);
+        }
     }
+
+    //private Transform canvasTran;
+    //private GameObject draggingObject;
+    //void Awake()
+    //{
+    //    canvasTran = transform.parent.parent;
+    //}
+    //public void OnBeginDrag(PointerEventData pointerEventData)
+    //{
+    //    Debug.Log("Drug");
+    //    var m0Slot = GameObject.FindGameObjectWithTag(_tagName).GetComponent<ArcanaBox_Key>();
+    //    if (m0Slot.GetItem() == null) return;
+    //    CreateDragObject();
+    //    draggingObject.transform.position = pointerEventData.position;
+    //}
+
+    //public void OnDrag(PointerEventData pointerEventData)
+    //{
+    //    var m0Slot = GameObject.FindGameObjectWithTag(_tagName).GetComponent<ArcanaBox_Key>();
+    //    if (m0Slot.GetItem() == null) return;
+    //    draggingObject.transform.position = pointerEventData.position;
+    //}
+
+    //public void OnEndDrag(PointerEventData pointerEventData)
+    //{
+    //    var m0Slot = GameObject.FindGameObjectWithTag(_tagName).GetComponent<ArcanaBox_Key>();
+    //    if (m0Slot.GetItem() == null) return;
+    //    Destroy(draggingObject);
+    //    m0Slot.RemoveItem(Item.UniqueId, 1);
+    //}
+
+    //private void CreateDragObject()
+    //{
+    //    if (Item == null) return;
+    //    draggingObject = new GameObject("Dragging Object");
+    //    draggingObject.transform.SetParent(canvasTran);
+    //    draggingObject.transform.SetAsLastSibling();
+    //    draggingObject.transform.localScale = Vector3.one;
+    //    CanvasGroup canvasGroup = draggingObject.AddComponent<CanvasGroup>();
+    //    canvasGroup.blocksRaycasts = false;
+    //    draggingObject.AddComponent<ArcanaSlot_Key>().Item = Item;
+    //}
 }

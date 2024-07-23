@@ -72,4 +72,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591a4343187bc524aa8ec00c9fe93b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tagName: ArcanaBox_Q
+  _tagName: ArcanaBox_M0

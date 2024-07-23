@@ -19,6 +19,10 @@ public class DeathZone : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene("SelectScene");
+        if(collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("SelectScene");
+        }
+        
     }
 }
