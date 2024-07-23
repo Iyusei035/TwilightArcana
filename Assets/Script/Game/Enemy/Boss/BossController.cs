@@ -6,6 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
 
@@ -254,6 +255,7 @@ public class BossController : MonoBehaviour,IDamageable
         effect.transform.position = BasePoint.position;
         yield return new WaitForSeconds(deadWaitTime);
         Destroy(gameObject);
+        SceneManager.LoadScene("GameClear");
     }
     void Move()
     {

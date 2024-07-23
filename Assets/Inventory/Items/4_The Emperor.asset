@@ -15,15 +15,19 @@ MonoBehaviour:
   uniqueId: 5
   itemName: 4_The Emperor
   icon: {fileID: 21300000, guid: bde06d603fe493e4d872362452441659, type: 3}
-  description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
+  description: "\u30B7\u30FC\u30EB\u30C9\u30D0\u30C3\u30B7\u30E5\u3067\u6575\u3092\u30B9\u30BF\u30F3"
   arcanaBase: {fileID: 8393319056060134629, guid: 769f4df7a7388b348be558e365897c14,
     type: 3}
   maxCoolTime: 25
   basicDamage: 10
+  buffValue: 1.5
   proximityBuffValue: 1.5
   longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  ultBuffValue: 3
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 0
   arcanaType: 0
   damageType: 1
   attackRange: 0

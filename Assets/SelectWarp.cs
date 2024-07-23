@@ -25,7 +25,7 @@ public class SelectWarp : MonoBehaviour
             Text.gameObject.GetComponent<TextMeshProUGUI>().enabled = true;
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                SceneManager.LoadScene("Boss");
+                SceneManager.LoadScene("Maze");
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }

@@ -35,6 +35,7 @@ public class NotResetInventory : MonoBehaviour
             canvas.enabled = false;
         }
         if (SceneManager.GetActiveScene().name == "Boss") return;
+        if (SceneManager.GetActiveScene().name == "Maze") return;
         Camera targetCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         if (targetCamera == null)
         {

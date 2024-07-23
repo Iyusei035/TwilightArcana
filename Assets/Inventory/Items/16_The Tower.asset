@@ -15,15 +15,19 @@ MonoBehaviour:
   uniqueId: 17
   itemName: 16_The Tower
   icon: {fileID: 21300000, guid: f9ca85fb8e01fb5448e090945583123d, type: 3}
-  description: "\u843D\u96F7"
+  description: "\u843D\u96F7\u3092\u843D\u3068\u3059"
   arcanaBase: {fileID: 4870197241165754541, guid: b45fa8a75f3488f4e8b9e7cc052378f9,
     type: 3}
   maxCoolTime: 25
   basicDamage: 10
+  buffValue: 1.5
   proximityBuffValue: 1.5
   longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  ultBuffValue: 3
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 0
   arcanaType: 0
   damageType: 0
   attackRange: 1

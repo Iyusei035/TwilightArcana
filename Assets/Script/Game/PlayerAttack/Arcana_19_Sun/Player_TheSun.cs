@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_19_TheSun : MonoBehaviour
+public class Player_19p_TheSun : MonoBehaviour
 {
     [SerializeField] GameObject a;
     [SerializeField] ParticleSystem particle;

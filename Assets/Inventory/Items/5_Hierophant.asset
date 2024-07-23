@@ -15,15 +15,19 @@ MonoBehaviour:
   uniqueId: 6
   itemName: Hierophant
   icon: {fileID: 21300000, guid: 0a742a0089d400b4f9114a187291a334, type: 3}
-  description: Hierophant
+  description: "\u4E09\u3064\u306E\u5149\u306E\u8F2A\u3092\u98DB\u3070\u3059"
   arcanaBase: {fileID: 8436947356625115147, guid: 43078a5da4b5ca74da9d98d8de6ce3af,
     type: 3}
   maxCoolTime: 3
   basicDamage: 10
+  buffValue: 1.5
   proximityBuffValue: 1.5
   longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  ultBuffValue: 3
+  proximityBuffFlg: 0
+  longDistanceBuffFlg: 0
   arcanaType: 0
   damageType: 0
   attackRange: 0
