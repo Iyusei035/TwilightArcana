@@ -11,15 +11,19 @@ namespace FlMr_Inventory
         [SerializeField] private ArcanaBase arcanaBase = null;
         [SerializeField] private int maxCoolTime = 10;
         [SerializeField] private float basicDamage = 10;
+        [SerializeField] private float buffValue = 1.5f;
         [SerializeField] private float proximityBuffValue = 1.5f;
         [SerializeField] private float longDistanceBuffValue = 1.5f;
         [SerializeField] private float badBuffValue = 0.5f;
         [SerializeField] private float damageValue_randMax = 10;
+        [SerializeField] private float ultBuffValue = 3.0f;
         private float coolTime = 0;
         private bool activeFlg = true;
-        public  bool proximityBuffFlg = false;
+        private bool buffFlg = false;
+        private bool badBuffFlg = false;
+        private bool ultBuffFlg = false;
+        public bool proximityBuffFlg = false;
         public bool longDistanceBuffFlg = false;
-        public bool badBuffFlg = false;
         public enum ArcanaType
         {
             Attack,
@@ -91,28 +95,31 @@ namespace FlMr_Inventory
         }
         public float GetArcanaDamage()
         {
-            //å≈íËÉ_ÉÅÅ[ÉW
             if (damageType == DamageType.Constant) return basicDamage;
             else
             {
-                float damage = basicDamage;
-                if (badBuffFlg)
+                float damage = 0.0f;
+                if (ultBuffFlg) damage = basicDamage * ultBuffValue;
+                if (!badBuffFlg && !buffFlg) return basicDamage;
+                else if (buffFlg && !badBuffFlg)
+                {
+                    damage = basicDamage * buffValue;
+                    return damage;
+                }
+                else if (badBuffFlg && !buffFlg)
+                {
                     damage = basicDamage * badBuffValue;
+                    return damage;
+                }
                 else
                 {
-                    if (attackRange == AttackRange.Proximity &&
-                        proximityBuffFlg)
-                        damage = basicDamage * proximityBuffValue;
-                    else if (attackRange == AttackRange.longDistance &&
-                        longDistanceBuffFlg)
-                        damage = basicDamage * longDistanceBuffValue;
+                    damage = basicDamage * (buffValue - badBuffValue);
+                    return damage;
                 }
                 Debug.Log(damage);
                 return damage;
             }
         }
-        public int SetId(int id)
-        { return uniqueId = id; }
         public void SetproximityBuffFlg(bool flg)
         {
             proximityBuffFlg = flg;
@@ -125,12 +132,26 @@ namespace FlMr_Inventory
         }
         public bool GetLongDistanceBuffFlg()
         { return longDistanceBuffFlg; }
+        public int SetId(int id)
+        { return uniqueId = id; }
+        public void SetBuffFlg(bool flg)
+        {
+            buffFlg = flg;
+        }
+        public bool GetBuffFlg()
+        { return buffFlg; }
         public void SetBadBuffFlg(bool flg)
         {
             badBuffFlg = flg;
         }
         public bool GetBadBuffFlg()
         { return badBuffFlg; }
+        public void SetUltBuffFlg(bool flg)
+        {
+            ultBuffFlg = flg;
+        }
+        public bool GetUltBuffFlg()
+        { return ultBuffFlg; }
         public float GetArcanaRandDamage()
         {
             float damage;

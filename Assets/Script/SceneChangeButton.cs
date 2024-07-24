@@ -9,7 +9,7 @@ public class SceneChangeButton : MonoBehaviour
     {
         Title,
         Bild,
-        Setting,
+        Sound,
         Select,
         Game
     }
@@ -35,7 +35,7 @@ public class SceneChangeButton : MonoBehaviour
                     sceneName = "BildScene";
                     break;
                 case SceneNameList.Setting:
-                    sceneName = "SettingScene";
+                    sceneName = "SoundScene";
                     break;
                 case SceneNameList.Select:
                     sceneName = "SelectScene";
@@ -56,7 +56,7 @@ public class SceneChangeButton : MonoBehaviour
                     sceneName = "BildScene";
                     break;
                 case SceneNameList.Setting:
-                    sceneName = "SettingScene";
+                    sceneName = "SoundScene";
                     break;
                 case SceneNameList.Select:
                     sceneName = "SelectScene";

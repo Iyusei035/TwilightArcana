@@ -15,18 +15,19 @@ MonoBehaviour:
   uniqueId: 3
   itemName: 2_The High Priestess
   icon: {fileID: 21300000, guid: 853b023ab431d394eba66ee1e415cbf9, type: 3}
-  description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
+  description: "\u6C34\u8272\u306E\u30EC\u30FC\u30B6\u30FC\u3092\u767A\u5C04"
   arcanaBase: {fileID: 3730653479477510808, guid: 87542e8031cff5649bae0bf5ca377baa,
     type: 3}
   maxCoolTime: 3
   basicDamage: 10
+  buffValue: 1.5
   proximityBuffValue: 1.5
   longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  ultBuffValue: 3
   proximityBuffFlg: 0
   longDistanceBuffFlg: 0
-  badBuffFlg: 0
   arcanaType: 0
   damageType: 0
   attackRange: 1

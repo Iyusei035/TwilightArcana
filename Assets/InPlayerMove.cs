@@ -155,7 +155,7 @@ public class InMove : MonoBehaviour, IDamageable
         if(Input.GetKey(KeyCode.LeftShift))
         {
             speed = 2;
-            sp -= DashSp;
+            //sp -= DashSp;
             if(sp<=0)
             {
                 speed = 1;
@@ -366,6 +366,7 @@ public class InMove : MonoBehaviour, IDamageable
     {
         string SpriteText = HealingCount.ToString();
         TextDisplay.GetComponent<TextMeshProUGUI>().text ="<sprite="+SpriteText+">"; //"<sprite=HealCount>";
+        //TextDisplay.GetComponent<TextMeshProUGUI>().text ="<sprite="+SpriteText+">"; //"<sprite=HealCount>";
     }
 }
 

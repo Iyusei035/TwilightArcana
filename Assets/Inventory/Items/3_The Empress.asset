@@ -15,18 +15,19 @@ MonoBehaviour:
   uniqueId: 4
   itemName: 3_The Empress
   icon: {fileID: 21300000, guid: 69e7211d9c74b8842acc28ef0b623b38, type: 3}
-  description: "\u76EE\u306E\u524D\u306B\u4E09\u9023\u6483"
+  description: "\u4F53\u529B\u3092\u56DE\u5FA9\u3055\u305B\u308B"
   arcanaBase: {fileID: -1254612963553387197, guid: 25270b494bb05e845ad0443f9ac1cc6b,
     type: 3}
   maxCoolTime: 1
   basicDamage: 10
+  buffValue: 1.5
   proximityBuffValue: 1.5
   longDistanceBuffValue: 1.5
   badBuffValue: 0.5
   damageValue_randMax: 10
+  ultBuffValue: 3
   proximityBuffFlg: 0
   longDistanceBuffFlg: 0
-  badBuffFlg: 0
   arcanaType: 1
   damageType: 1
   attackRange: 0

@@ -1381,50 +1381,20 @@ PrefabInstance:
       propertyPath: _tagName
       value: ArcanaBox_Q
       objectReference: {fileID: 0}
-    - target: {fileID: 4761946359067591696, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_text
-      value: <sprite=1>
-      objectReference: {fileID: 0}
     - target: {fileID: 5158991970969589602, guid: 93b6289e8955ee443ab8866495ad6afa,
         type: 3}
       propertyPath: _tagName
       value: ArcanaBox_M1
       objectReference: {fileID: 0}
+    - target: {fileID: 5736165874298879889, guid: 93b6289e8955ee443ab8866495ad6afa,
+        type: 3}
+      propertyPath: m_Name
+      value: KeyR
+      objectReference: {fileID: 0}
     - target: {fileID: 5854290249770401075, guid: 93b6289e8955ee443ab8866495ad6afa,
         type: 3}
       propertyPath: m_Name
       value: 'PlayerUI '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 207.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071133676388783253, guid: 93b6289e8955ee443ab8866495ad6afa,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6620424422851752792, guid: 93b6289e8955ee443ab8866495ad6afa,
         type: 3}
@@ -1526,6 +1496,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6864405947549560158, guid: 93b6289e8955ee443ab8866495ad6afa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0214ad632663ed541a6ddcfefc4e92c5,
+        type: 3}
     - target: {fileID: 8294017208133150274, guid: 93b6289e8955ee443ab8866495ad6afa,
         type: 3}
       propertyPath: _tagName
@@ -3807,7 +3783,8 @@ PrefabInstance:
     - target: {fileID: 7489163918429971574, guid: 3cfb5e8a0dc5b9245880140b76b7cf4e,
         type: 3}
       propertyPath: m_text
-      value: 'Tab to Boss
+      value: 'Tab to Maze
+
 
 
 '
